@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon -->
+<link rel="shortcut icon" href="img/favicon.svg" type="image/x-icon" />
+
+<!-- Link Swiper's CSS -->
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+<!-- nouislider -->
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.5.0/nouislider.min.css"
+/>
+
+<!-- Choices JS  -->
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css"
+/>
+
+<!-- fancybox -->
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css"
+/>
+
+<!-- Nice Select -->
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.min.css"
+  integrity="sha512-CruCP+TD3yXzlvvijET8wV5WxxEh5H8P4cmz0RFbKK6FlZ2sYl3AEsKlLPHbniXKSrDdFewhbmBK5skbdsASbQ=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+/>
+
+<!-- Custom Link -->
+<link rel="stylesheet" href="css/style.css" />
+
+<title>Бригадир</title>
+
+  </head>
+
+  <body>
+    <div class="popup popup--login">
+  <div class="popup__container">
+    <button class="popup__close" type="button" aria-label="Закрыть">
+      <svg width="15" height="15">
+        <use xlink:href="img/sprite.svg#close"></use>
+      </svg>
+    </button>
+    <div class="popup__wrapper">
+      <span class="popup__title">Вход в личный кабинет</span>
+
+      <form class="form-submit">
+        <div class="form-submit__group">
+          <label class="form-submit__label" for="login-email">
+            Ваш номер телефона или e-mail
+          </label>
+
+          <input
+            class="form-submit__input"
+            name="name"
+            id="login-email"
+            type="text"
+            placeholder="+7 ( _ _ _ ) _ _ _ - _ _ - _ _"
+            required
+          />
+        </div>
+        <div class="form-submit__group">
+          <label class="form-submit__label" for="login-password">
+            Пароль
+          </label>
+
+          <input
+            class="form-submit__input"
+            name="tel"
+            id="login-password"
+            type="password"
+            placeholder="*************"
+            required
+          />
+          <button class="form-submit__show-password" type="button">
+            <svg
+              width="21"
+              height="20"
+              viewBox="0 0 21 20"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M10.5 4.375C16.75 4.375 19.25 10 19.25 10C19.25 10 16.75 15.625 10.5 15.625C4.25 15.625 1.75 10 1.75 10C1.75 10 4.25 4.375 10.5 4.375Z"
+                stroke="#222222"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M10.5 13.125C8.77411 13.125 7.375 11.7259 7.375 10C7.375 8.27411 8.77411 6.875 10.5 6.875C12.2259 6.875 13.625 8.27411 13.625 10C13.625 11.7259 12.2259 13.125 10.5 13.125Z"
+                stroke="black"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+        </div>
+
+        <div class="form-submit__group form-submit__group--row">
+          <label class="checkbox">
+            <input class="checkbox__input" type="checkbox" required checked />
+            <span class="checkbox__box"></span>
+            <span class="checkbox__text"> Запопомнить меня </span>
+          </label>
+
+          <button class="form-submit__reset-password">Забыли пароль</button>
+        </div>
+
+        <div class="form-submit__group">
+          <button class="form-submit__btn btn" type="button">Войти</button>
+          <button class="form-submit__btn btn btn--gray" type="button">
+            Регистрация
+          </button>
+        </div>
+
+        <p class="form-submit__policy">
+          Продолжая, вы соглашаетесь с
+          <a href="#">политикой конфиденциальности</a>
+        </p>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div class="popup popup--registration">
+  <div class="popup__container">
+    <button class="popup__close" type="button" aria-label="Закрыть">
+      <svg width="15" height="15">
+        <use xlink:href="img/sprite.svg#close"></use>
+      </svg>
+    </button>
+    <div class="popup__wrapper">
+      <span class="popup__title">Регистрацияя</span>
+
+      <form class="form-submit">
+        <div class="form-submit__group">
+          <label class="form-submit__label" for="login-email"> Ваше имя </label>
+
+          <input
+            class="form-submit__input"
+            name="name"
+            id="login-email"
+            type="text"
+            placeholder="ФИО"
+            required
+          />
+        </div>
+        <div class="form-submit__group">
+          <label class="form-submit__label" for="login-password">
+            Е-mail
+          </label>
+
+          <input
+            class="form-submit__input"
+            name="tel"
+            id="login-password"
+            type="password"
+            placeholder="yana.anuchina@mail.ru"
+            required
+          />
+        </div>
+        <div class="form-submit__group">
+          <label class="form-submit__label" for="login-password">
+            Ваш номер телефона
+          </label>
+
+          <input
+            class="form-submit__input"
+            name="tel"
+            id="login-password"
+            type="password"
+            placeholder="+7 ( _ _ _ ) _ _ _ - _ _ - _ _"
+            required
+          />
+        </div>
+
+        <div class="form-submit__group">
+          <button class="form-submit__btn btn">Зарегистрироваться</button>
+
+          <label class="checkbox">
+            <input class="checkbox__input" type="checkbox" required checked />
+            <span class="checkbox__box"></span>
+            <span class="checkbox__text"
+              >Даю согласие на обработку персональных данных</span
+            >
+          </label>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div class="popup popup--restore-pas">
+  <div class="popup__container">
+    <button class="popup__close" type="button" aria-label="Закрыть">
+      <svg width="15" height="15">
+        <use xlink:href="img/sprite.svg#close"></use>
+      </svg>
+    </button>
+    <div class="popup__wrapper">
+      <span class="popup__title">Востановить пароль</span>
+      <p class="popup__text">Если вы забыли пароль, введите e-mail</p>
+
+      <form class="form-submit">
+        <div class="form-submit__group">
+          <label class="form-submit__label" for="login-email">Е-mail</label>
+
+          <input
+            class="form-submit__input"
+            name="name"
+            id="login-email"
+            type="email"
+            placeholder="Адрес вашей электронной почты"
+            required
+          />
+        </div>
+        <p class="form-submit__text">
+          Контрольная строка для смены парля а также ваши регистрационные
+          данные, будут высланы вам по e-mail
+        </p>
+
+        <div class="form-submit__group">
+          <button class="form-submit__btn btn">Зарегистрироваться</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div class="popup popup--back-call">
+  <div class="popup__container">
+    <button class="popup__close" type="button" aria-label="Закрыть">
+      <svg width="15" height="15">
+        <use xlink:href="img/sprite.svg#close"></use>
+      </svg>
+    </button>
+    <div class="popup__wrapper">
+      <span class="popup__title">Обратный звонок</span>
+
+      <form class="form-submit">
+        <div class="form-submit__inner">
+          <div class="form-submit__group">
+            <label class="form-submit__label" for="login-email">Ваше имя</label>
+
+            <input
+              class="form-submit__input"
+              name="name"
+              id="login-email"
+              type="email"
+              placeholder="ФИО"
+              required
+            />
+          </div>
+          <div class="form-submit__group">
+            <label class="form-submit__label" for="login-email"
+              >Ваш телефон</label
+            >
+
+            <input
+              class="form-submit__input"
+              name="name"
+              id="login-email"
+              type="email"
+              placeholder="+7 ( _ _ _ ) _ _ _ - _ _ - _ _"
+              required
+            />
+          </div>
+        </div>
+
+        <div class="form-submit__group">
+          <button class="form-submit__btn btn">Отправить</button>
+
+          <label class="checkbox">
+            <input class="checkbox__input" type="checkbox" required checked />
+            <span class="checkbox__box"></span>
+            <span class="checkbox__text"
+              >Даю согласие на обработку персональных данных</span
+            >
+          </label>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div class="popup popup--notify">
+  <div class="popup__container">
+    <button class="popup__close" type="button" aria-label="Закрыть">
+      <svg width="15" height="15">
+        <use xlink:href="img/sprite.svg#close"></use>
+      </svg>
+    </button>
+    <div class="popup__wrapper">
+      <span class="popup__title">Мы оповестим о наличии</span>
+
+      <form class="form-submit">
+        <div class="form-submit__group">
+          <label class="form-submit__label" for="login-email">Е-mail</label>
+
+          <input
+            class="form-submit__input"
+            name="name"
+            id="login-email"
+            type="email"
+            placeholder="Адрес вашей электронной почты"
+            required
+          />
+        </div>
+
+        <div class="form-submit__group">
+          <button class="form-submit__btn btn">Узнать о наличии</button>
+
+          <label class="checkbox">
+            <input class="checkbox__input" type="checkbox" required checked />
+            <span class="checkbox__box"></span>
+            <span class="checkbox__text"
+              >Даю согласие на обработку персональных данных</span
+            >
+          </label>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+    <div class="site-wrapper">
+      
+
+      <main class="main"><section class="vacancies">
+  <div class="container">
+    <h1 class="vacancies__title">Вакансии</h1>
+
+    <div class="vacancies__wrapper">
+      <div class="vacancies__top">
+        <ul class="vacancies__list">
+          <li class="vacancies__item">
+            <button class="vacancies__btn btn" type="button">
+              Отправить резюме
+            </button>
+          </li>
+          <li class="vacancies__item">
+            <span class="vacancies__name">Контактное лицо</span>
+            <span>Иванов Иван Ивановч</span>
+          </li>
+          <li class="vacancies__item">
+            <span class="vacancies__name">e-mail</span>
+            <a class="vacancies__link" href="mailto:b.brigadirov@yandex.ru"
+              >b.brigadirov@yandex.ru</a
+            >
+          </li>
+
+          <li class="vacancies__item">
+            <span class="vacancies__name"> Телефон</span>
+            <a class="vacancies__link" href="tel:8 (499) 136-83-33"
+              >8 (499) 136-83-33</a
+            >
+          </li>
+        </ul>
+        <p class="vacancies__text">
+          Мы рады видеть в команде инициативных и вовлеченных сотрудников,
+          готовых решать сложные задачи и реализовывать масштабные проекты.
+        </p>
+      </div>
+
+      <div class="vacancies__content">
+        <span class="vacancies__heading">Отдел доставки:</span>
+
+        <div class="vacancies-accordion accordion">
+          <button
+            class="vacancies-accordion__control accordion-control"
+            type="button"
+          >
+            <span>Курьер - г. Павлово</span>
+            Возможно совмещение
+          </button>
+          <div class="vacancies-accordion__content accordion-content">
+            <div>
+              Требования к кандидатам: Граждане РФ, имеющие постоянную или
+              временную регистрацию в Москве или области Возраст 16-50 лет
+              Обязанности: доставка заказов клиентам интернет-магазина
+              (документов и стройматериалов) (средний вес товара 15-20 кг)
+              доставка только в пределах Москвы, в непосредственной близости от
+              метро расчеты с клиентами Требования: желательно знание Москвы
+              ответственность, пунктуальность, исполнительность Условия: график
+              работы: (плавающий) м. Выставочная Оплата договорная
+            </div>
+          </div>
+        </div>
+        <div class="vacancies-accordion accordion">
+          <button
+            class="vacancies-accordion__control accordion-control"
+            type="button"
+          >
+            <span>Курьер - г. Павлово</span>
+            Возможно совмещение
+          </button>
+          <div class="vacancies-accordion__content accordion-content">
+            <div>
+              Требования к кандидатам: Граждане РФ, имеющие постоянную или
+              временную регистрацию в Москве или области Возраст 16-50 лет
+              Обязанности: доставка заказов клиентам интернет-магазина
+              (документов и стройматериалов) (средний вес товара 15-20 кг)
+              доставка только в пределах Москвы, в непосредственной близости от
+              метро расчеты с клиентами Требования: желательно знание Москвы
+              ответственность, пунктуальность, исполнительность Условия: график
+              работы: (плавающий) м. Выставочная Оплата договорная
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+      <footer class="footer">
+  <div class="container"></div>
+</footer>
+
+    </div>
+
+    <!-- Swiper JS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+<!-- nouislider -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.5.0/nouislider.min.js"></script>
+
+<!-- jQuery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<!-- Choices JS -->
+<script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
+
+<!-- Input Mask -->
+<script
+  src="https://cdn.jsdelivr.net/npm/jquery.maskedinput@1.4.1/src/jquery.maskedinput.min.js"
+  type="text/javascript"
+></script>
+
+<!-- Nice Select -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js" integrity="sha512-NqYds8su6jivy1/WLoW8x1tZMRD7/1ZfhWG/jcRQLOzV1k1rIODCpMgoBnar5QXshKJGV7vi0LXLNXPoFsM5Zg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<!-- fancybox -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+
+<!-- JS -->
+<script src="js/main.min.js"></script>
+
+  </body>
+</html>
+
+<!-- <label class="checkbox">
+  <input class="checkbox__input" type="checkbox" required />
+  <span class="checkbox__box"></span>
+  <span class="checkbox__text">
+    Соглашаюсь с<a href="#"> обработкой персональных данных</a>
+  </span> 
+</label> -->

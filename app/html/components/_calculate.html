@@ -1,0 +1,39 @@
+<section
+  class="calculate"
+  style="background-image: url('img/calculate-bg.jpg')"
+>
+  <div class="container">
+    <div class="calculate__wrapper">
+      <div class="calculate__offer">
+        <h2 class="calculate__title">Рассчитать стоимость доставки</h2>
+        <form class="calculate__form form-calc">
+          <div class="form-calc__group">
+            <label class="form-calc__label" for="address">Адрес доставки</label>
+            <input
+              class="form-calc__input"
+              type="text"
+              id="address"
+              placeholder="Укажите адрес доставки"
+            />
+          </div>
+          <button class="form-calc__btn btn" type="submit">Рассчитать</button>
+        </form>
+
+        <div class="calculate__total">
+          Сумма доставки составит: <span>99 000 ₽</span>
+        </div>
+        <div class="calculate__text">
+          Рассчеты являются примерными, для более точного рассчета
+          <a href="#">свяжитесь с нашим менеджером</a>
+        </div>
+      </div>
+
+      <div class="calculate__img">
+        <picture>
+          <source srcset="img/calculate-img.webp" type="image/webp" />
+          <img src="img/calculate-img.png" alt="bg" />
+        </picture>
+      </div>
+    </div>
+  </div>
+</section>

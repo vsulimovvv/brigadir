@@ -1,0 +1,290 @@
+<div class="popup popup--login">
+  <div class="popup__container">
+    <button class="popup__close" type="button" aria-label="Закрыть">
+      <svg width="15" height="15">
+        <use xlink:href="img/sprite.svg#close"></use>
+      </svg>
+    </button>
+    <div class="popup__wrapper">
+      <span class="popup__title">Вход в личный кабинет</span>
+
+      <form class="form-submit">
+        <div class="form-submit__group">
+          <label class="form-submit__label" for="login-email">
+            Ваш номер телефона или e-mail
+          </label>
+
+          <input
+            class="form-submit__input"
+            name="name"
+            id="login-email"
+            type="text"
+            placeholder="+7 ( _ _ _ ) _ _ _ - _ _ - _ _"
+            required
+          />
+        </div>
+        <div class="form-submit__group">
+          <label class="form-submit__label" for="login-password">
+            Пароль
+          </label>
+
+          <input
+            class="form-submit__input"
+            name="tel"
+            id="login-password"
+            type="password"
+            placeholder="*************"
+            required
+          />
+          <button class="form-submit__show-password" type="button">
+            <svg
+              width="21"
+              height="20"
+              viewBox="0 0 21 20"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M10.5 4.375C16.75 4.375 19.25 10 19.25 10C19.25 10 16.75 15.625 10.5 15.625C4.25 15.625 1.75 10 1.75 10C1.75 10 4.25 4.375 10.5 4.375Z"
+                stroke="#222222"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M10.5 13.125C8.77411 13.125 7.375 11.7259 7.375 10C7.375 8.27411 8.77411 6.875 10.5 6.875C12.2259 6.875 13.625 8.27411 13.625 10C13.625 11.7259 12.2259 13.125 10.5 13.125Z"
+                stroke="black"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+        </div>
+
+        <div class="form-submit__group form-submit__group--row">
+          <label class="checkbox">
+            <input class="checkbox__input" type="checkbox" required checked />
+            <span class="checkbox__box"></span>
+            <span class="checkbox__text"> Запопомнить меня </span>
+          </label>
+
+          <button class="form-submit__reset-password">Забыли пароль</button>
+        </div>
+
+        <div class="form-submit__group">
+          <button class="form-submit__btn btn" type="button">Войти</button>
+          <button class="form-submit__btn btn btn--gray" type="button">
+            Регистрация
+          </button>
+        </div>
+
+        <p class="form-submit__policy">
+          Продолжая, вы соглашаетесь с
+          <a href="#">политикой конфиденциальности</a>
+        </p>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div class="popup popup--registration">
+  <div class="popup__container">
+    <button class="popup__close" type="button" aria-label="Закрыть">
+      <svg width="15" height="15">
+        <use xlink:href="img/sprite.svg#close"></use>
+      </svg>
+    </button>
+    <div class="popup__wrapper">
+      <span class="popup__title">Регистрацияя</span>
+
+      <form class="form-submit">
+        <div class="form-submit__group">
+          <label class="form-submit__label" for="login-email"> Ваше имя </label>
+
+          <input
+            class="form-submit__input"
+            name="name"
+            id="login-email"
+            type="text"
+            placeholder="ФИО"
+            required
+          />
+        </div>
+        <div class="form-submit__group">
+          <label class="form-submit__label" for="login-password">
+            Е-mail
+          </label>
+
+          <input
+            class="form-submit__input"
+            name="tel"
+            id="login-password"
+            type="password"
+            placeholder="yana.anuchina@mail.ru"
+            required
+          />
+        </div>
+        <div class="form-submit__group">
+          <label class="form-submit__label" for="login-password">
+            Ваш номер телефона
+          </label>
+
+          <input
+            class="form-submit__input"
+            name="tel"
+            id="login-password"
+            type="password"
+            placeholder="+7 ( _ _ _ ) _ _ _ - _ _ - _ _"
+            required
+          />
+        </div>
+
+        <div class="form-submit__group">
+          <button class="form-submit__btn btn">Зарегистрироваться</button>
+
+          <label class="checkbox">
+            <input class="checkbox__input" type="checkbox" required checked />
+            <span class="checkbox__box"></span>
+            <span class="checkbox__text"
+              >Даю согласие на обработку персональных данных</span
+            >
+          </label>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div class="popup popup--restore-pas">
+  <div class="popup__container">
+    <button class="popup__close" type="button" aria-label="Закрыть">
+      <svg width="15" height="15">
+        <use xlink:href="img/sprite.svg#close"></use>
+      </svg>
+    </button>
+    <div class="popup__wrapper">
+      <span class="popup__title">Востановить пароль</span>
+      <p class="popup__text">Если вы забыли пароль, введите e-mail</p>
+
+      <form class="form-submit">
+        <div class="form-submit__group">
+          <label class="form-submit__label" for="login-email">Е-mail</label>
+
+          <input
+            class="form-submit__input"
+            name="name"
+            id="login-email"
+            type="email"
+            placeholder="Адрес вашей электронной почты"
+            required
+          />
+        </div>
+        <p class="form-submit__text">
+          Контрольная строка для смены парля а также ваши регистрационные
+          данные, будут высланы вам по e-mail
+        </p>
+
+        <div class="form-submit__group">
+          <button class="form-submit__btn btn">Зарегистрироваться</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div class="popup popup--back-call">
+  <div class="popup__container">
+    <button class="popup__close" type="button" aria-label="Закрыть">
+      <svg width="15" height="15">
+        <use xlink:href="img/sprite.svg#close"></use>
+      </svg>
+    </button>
+    <div class="popup__wrapper">
+      <span class="popup__title">Обратный звонок</span>
+
+      <form class="form-submit">
+        <div class="form-submit__inner">
+          <div class="form-submit__group">
+            <label class="form-submit__label" for="login-email">Ваше имя</label>
+
+            <input
+              class="form-submit__input"
+              name="name"
+              id="login-email"
+              type="email"
+              placeholder="ФИО"
+              required
+            />
+          </div>
+          <div class="form-submit__group">
+            <label class="form-submit__label" for="login-email"
+              >Ваш телефон</label
+            >
+
+            <input
+              class="form-submit__input"
+              name="name"
+              id="login-email"
+              type="email"
+              placeholder="+7 ( _ _ _ ) _ _ _ - _ _ - _ _"
+              required
+            />
+          </div>
+        </div>
+
+        <div class="form-submit__group">
+          <button class="form-submit__btn btn">Отправить</button>
+
+          <label class="checkbox">
+            <input class="checkbox__input" type="checkbox" required checked />
+            <span class="checkbox__box"></span>
+            <span class="checkbox__text"
+              >Даю согласие на обработку персональных данных</span
+            >
+          </label>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div class="popup popup--notify">
+  <div class="popup__container">
+    <button class="popup__close" type="button" aria-label="Закрыть">
+      <svg width="15" height="15">
+        <use xlink:href="img/sprite.svg#close"></use>
+      </svg>
+    </button>
+    <div class="popup__wrapper">
+      <span class="popup__title">Мы оповестим о наличии</span>
+
+      <form class="form-submit">
+        <div class="form-submit__group">
+          <label class="form-submit__label" for="login-email">Е-mail</label>
+
+          <input
+            class="form-submit__input"
+            name="name"
+            id="login-email"
+            type="email"
+            placeholder="Адрес вашей электронной почты"
+            required
+          />
+        </div>
+
+        <div class="form-submit__group">
+          <button class="form-submit__btn btn">Узнать о наличии</button>
+
+          <label class="checkbox">
+            <input class="checkbox__input" type="checkbox" required checked />
+            <span class="checkbox__box"></span>
+            <span class="checkbox__text"
+              >Даю согласие на обработку персональных данных</span
+            >
+          </label>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    @include('./components/base/_meta.html')
+    @include('./components/base/_links.html')
+  </head>
+
+  <body>
+    @include('./components/_popups.html')
+
+    <div class="site-wrapper">
+      <!-- @include('./components/_header.html') -->
+
+      <main class="main">
+        <div class="container">
+          <div class="grid">
+            <div class="grid__left">
+              <div class="side">
+                <div class="side__box">
+                  <ul class="side__list">
+                    <li class="side__item">
+                      <a class="side__link" href="#">
+                        <img
+                          width="24"
+                          height="24"
+                          src="img/categories-icons/1.svg"
+                          alt="categories-icons"
+                        />
+                        Стройматериалы
+                      </a>
+                    </li>
+                    <li class="side__item">
+                      <a class="side__link" href="#">
+                        <img
+                          width="24"
+                          height="24"
+                          src="img/categories-icons/1.svg"
+                          alt="categories-icons"
+                        />
+                        Инструмент
+                      </a>
+                    </li>
+                    <li class="side__item">
+                      <a class="side__link" href="#">
+                        <img
+                          width="24"
+                          height="24"
+                          src="img/categories-icons/1.svg"
+                          alt="categories-icons"
+                        />
+                        Электрика
+                      </a>
+                    </li>
+                    <li class="side__item">
+                      <a class="side__link" href="#">
+                        <img
+                          width="24"
+                          height="24"
+                          src="img/categories-icons/1.svg"
+                          alt="categories-icons"
+                        />
+                        Инженерные системы
+                      </a>
+                    </li>
+                    <li class="side__item">
+                      <a class="side__link" href="#">
+                        <img
+                          width="24"
+                          height="24"
+                          src="img/categories-icons/1.svg"
+                          alt="categories-icons"
+                        />
+                        Интерьер и отделка
+                      </a>
+                    </li>
+                    <li class="side__item">
+                      <a class="side__link" href="#">
+                        <img
+                          width="24"
+                          height="24"
+                          src="img/categories-icons/1.svg"
+                          alt="categories-icons"
+                        />
+                        Сантехника
+                      </a>
+                    </li>
+                    <li class="side__item">
+                      <a class="side__link" href="#">
+                        <img
+                          width="24"
+                          height="24"
+                          src="img/categories-icons/1.svg"
+                          alt="categories-icons"
+                        />
+                        Крепеж
+                      </a>
+                    </li>
+                    <li class="side__item">
+                      <a class="side__link" href="#">
+                        <img
+                          width="24"
+                          height="24"
+                          src="img/categories-icons/1.svg"
+                          alt="categories-icons"
+                        />
+                        Благоустройство
+                      </a>
+                    </li>
+                    <li class="side__item">
+                      <a class="side__link" href="#">
+                        <img
+                          width="24"
+                          height="24"
+                          src="img/categories-icons/1.svg"
+                          alt="categories-icons"
+                        />
+                        Все для сада
+                      </a>
+                    </li>
+                    <li class="side__item">
+                      <a class="side__link" href="#">
+                        <img
+                          width="24"
+                          height="24"
+                          src="img/categories-icons/1.svg"
+                          alt="categories-icons"
+                        />
+                        Новинки
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="side__filters">
+                  <div class="filters-box">
+                    <ul class="filters-box__list">
+                      <li class="filters-box__item">
+                        <a class="filters-box__link" href="#">Инструмент</a>
+                      </li>
+                      <li class="filters-box__item">
+                        <a class="filters-box__link" href="#"
+                          >Электроинструмент</a
+                        >
+                      </li>
+                      <li class="filters-box__item">
+                        <a class="filters-box__link" href="#"
+                          >Наборы электроинструмента 1</a
+                        >
+                      </li>
+                      <li class="filters-box__item">
+                        <a class="filters-box__link" href="#"
+                          >Дрели и шуруповерты 107</a
+                        >
+                      </li>
+                      <li class="filters-box__item">
+                        <a class="filters-box__link" href="#"
+                          >Компрессорное оборудование и аксессуары 101</a
+                        >
+                      </li>
+                      <li class="filters-box__item">
+                        <a class="filters-box__link" href="#"
+                          >Краскопульты 14</a
+                        >
+                      </li>
+                      <li class="filters-box__item">
+                        <a class="filters-box__link" href="#">Лобзики 24</a>
+                      </li>
+                    </ul>
+                    <button class="filters-box__more" type="button">
+                      Показать еще...
+                    </button>
+                  </div>
+                  <div class="filters-box">
+                    <ul class="filters-box__list">
+                      <li class="filters-box__item">
+                        <label class="sort__checkbox checkbox">
+                          <input
+                            class="checkbox__input"
+                            type="checkbox"
+                            required
+                          />
+                          <span class="checkbox__box"></span>
+                          <span class="checkbox__text"> Шуруповерты </span>
+                        </label>
+                      </li>
+                      <li class="filters-box__item">
+                        <label class="sort__checkbox checkbox">
+                          <input
+                            class="checkbox__input"
+                            type="checkbox"
+                            required
+                          />
+                          <span class="checkbox__box"></span>
+                          <span class="checkbox__text"> Бензо пилы </span>
+                        </label>
+                      </li>
+                      <li class="filters-box__item">
+                        <label class="sort__checkbox checkbox">
+                          <input
+                            class="checkbox__input"
+                            type="checkbox"
+                            required
+                            checked
+                          />
+                          <span class="checkbox__box"></span>
+                          <span class="checkbox__text"> Перфораторы </span>
+                        </label>
+                      </li>
+                      <li class="filters-box__item">
+                        <label class="sort__checkbox checkbox">
+                          <input
+                            class="checkbox__input"
+                            type="checkbox"
+                            required
+                          />
+                          <span class="checkbox__box"></span>
+                          <span class="checkbox__text"> Электро дрели </span>
+                        </label>
+                      </li>
+                      <li class="filters-box__item">
+                        <label class="sort__checkbox checkbox">
+                          <input
+                            class="checkbox__input"
+                            type="checkbox"
+                            required
+                          />
+                          <span class="checkbox__box"></span>
+                          <span class="checkbox__text">Пчелки </span>
+                        </label>
+                      </li>
+                      <li class="filters-box__item">
+                        <label class="sort__checkbox checkbox">
+                          <input
+                            class="checkbox__input"
+                            type="checkbox"
+                            required
+                          />
+                          <span class="checkbox__box"></span>
+                          <span class="checkbox__text"
+                            >Сварочные аппараты
+                          </span>
+                        </label>
+                      </li>
+                      <li class="filters-box__item">
+                        <label class="sort__checkbox checkbox">
+                          <input
+                            class="checkbox__input"
+                            type="checkbox"
+                            required
+                          />
+                          <span class="checkbox__box"></span>
+                          <span class="checkbox__text">Электро пилы</span>
+                        </label>
+                      </li>
+                    </ul>
+                    <button class="filters-box__more" type="button">
+                      Показать еще...
+                    </button>
+                  </div>
+
+                  <div class="filters-box">
+                    <div class="filters-box__accordion accordion">
+                      <button
+                        class="filters-box__control accordion-control"
+                        type="button"
+                      >
+                        Мощность (Вт)
+                      </button>
+                      <div class="filters-box__content accordion-content">
+                        <ul class="filters-box__list">
+                          <li class="filters-box__item">
+                            <label class="sort__checkbox checkbox">
+                              <input
+                                class="checkbox__input"
+                                type="checkbox"
+                                required
+                              />
+                              <span class="checkbox__box"></span>
+                              <span class="checkbox__text">40</span>
+                            </label>
+                          </li>
+                          <li class="filters-box__item">
+                            <label class="sort__checkbox checkbox">
+                              <input
+                                class="checkbox__input"
+                                type="checkbox"
+                                required
+                              />
+                              <span class="checkbox__box"></span>
+                              <span class="checkbox__text">470</span>
+                            </label>
+                          </li>
+                          <li class="filters-box__item">
+                            <label class="sort__checkbox checkbox">
+                              <input
+                                class="checkbox__input"
+                                type="checkbox"
+                                required
+                              />
+                              <span class="checkbox__box"></span>
+                              <span class="checkbox__text">650</span>
+                            </label>
+                          </li>
+                          <li class="filters-box__item">
+                            <label class="sort__checkbox checkbox">
+                              <input
+                                class="checkbox__input"
+                                type="checkbox"
+                                required
+                              />
+                              <span class="checkbox__box"></span>
+                              <span class="checkbox__text">720</span>
+                            </label>
+                          </li>
+                          <li class="filters-box__item">
+                            <label class="sort__checkbox checkbox">
+                              <input
+                                class="checkbox__input"
+                                type="checkbox"
+                                required
+                              />
+                              <span class="checkbox__box"></span>
+                              <span class="checkbox__text">780</span>
+                            </label>
+                          </li>
+                        </ul>
+                        <button class="filters-box__more" type="button">
+                          Показать еще...
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="filters-box">
+                    <div class="filters-box__accordion accordion">
+                      <button
+                        class="filters-box__control accordion-control"
+                        type="button"
+                      >
+                        Сила удара
+                      </button>
+                      <div class="filters-box__content accordion-content">
+                        <ul class="filters-box__list">
+                          <li class="filters-box__item">
+                            <label class="sort__checkbox checkbox">
+                              <input
+                                class="checkbox__input"
+                                type="checkbox"
+                                required
+                              />
+                              <span class="checkbox__box"></span>
+                              <span class="checkbox__text">40</span>
+                            </label>
+                          </li>
+                          <li class="filters-box__item">
+                            <label class="sort__checkbox checkbox">
+                              <input
+                                class="checkbox__input"
+                                type="checkbox"
+                                required
+                              />
+                              <span class="checkbox__box"></span>
+                              <span class="checkbox__text">470</span>
+                            </label>
+                          </li>
+                          <li class="filters-box__item">
+                            <label class="sort__checkbox checkbox">
+                              <input
+                                class="checkbox__input"
+                                type="checkbox"
+                                required
+                              />
+                              <span class="checkbox__box"></span>
+                              <span class="checkbox__text">650</span>
+                            </label>
+                          </li>
+                          <li class="filters-box__item">
+                            <label class="sort__checkbox checkbox">
+                              <input
+                                class="checkbox__input"
+                                type="checkbox"
+                                required
+                              />
+                              <span class="checkbox__box"></span>
+                              <span class="checkbox__text">720</span>
+                            </label>
+                          </li>
+                          <li class="filters-box__item">
+                            <label class="sort__checkbox checkbox">
+                              <input
+                                class="checkbox__input"
+                                type="checkbox"
+                                required
+                              />
+                              <span class="checkbox__box"></span>
+                              <span class="checkbox__text">780</span>
+                            </label>
+                          </li>
+                        </ul>
+                        <button class="filters-box__more" type="button">
+                          Показать еще...
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <article
+                  class="new-slider-card"
+                  style="background-image: url('img/new-slider-bg.jpg')"
+                >
+                  <div class="new-slider-card__left">
+                    <h3 class="new-slider-card__title">
+                      Супер прочные <br />
+                      сверла от storgom
+                    </h3>
+                    <p class="new-slider-card__note">по доступным ценам</p>
+                    <p class="new-slider-card__text">
+                      Качественный инструмент - залог быстрого ремонта
+                    </p>
+                  </div>
+                  <div class="new-slider-card__img">
+                    <picture>
+                      <source
+                        srcset="img/new-slider-img-small.webp"
+                        type="image/webp"
+                      />
+                      <img src="img/new-slider-img-small.png" alt="image" />
+                    </picture>
+                  </div>
+                  <div class="new-slider-card__right">
+                    <a class="new-slider-card__btn btn" href="#">
+                      <span>Перейти к товару</span>
+
+                      <svg
+                        width="20"
+                        height="20"
+                        viewBox="0 0 20 20"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M8.125 6.25L11.875 10L8.125 13.75"
+                          stroke="white"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                        />
+                      </svg>
+                    </a>
+                  </div>
+                </article>
+              </div>
+            </div>
+            <div class="grid__right">@include('./components/_brand.html')</div>
+          </div>
+        </div>
+      </main>
+      @include('./components/_footer.html')
+    </div>
+
+    @include('./components/base/_scripts.html')
+  </body>
+</html>
+
+<!-- <label class="checkbox">
+  <input class="checkbox__input" type="checkbox" required />
+  <span class="checkbox__box"></span>
+  <span class="checkbox__text">
+    Соглашаюсь с<a href="#"> обработкой персональных данных</a>
+  </span> 
+</label> -->
