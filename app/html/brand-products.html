@@ -9,7 +9,7 @@
     @include('./components/_popups.html')
 
     <div class="site-wrapper">
-      <!-- @include('./components/_header.html') -->
+      @include('./components/_header.html')
 
       <main class="main">
         <div class="container">
@@ -23,7 +23,7 @@
                         <img
                           width="24"
                           height="24"
-                          src="img/categories-icons/1.svg"
+                          src="img/categories-icons/1.png"
                           alt="categories-icons"
                         />
                         Стройматериалы
@@ -34,7 +34,7 @@
                         <img
                           width="24"
                           height="24"
-                          src="img/categories-icons/1.svg"
+                          src="img/categories-icons/2.png"
                           alt="categories-icons"
                         />
                         Инструмент
@@ -45,7 +45,7 @@
                         <img
                           width="24"
                           height="24"
-                          src="img/categories-icons/1.svg"
+                          src="img/categories-icons/3.png"
                           alt="categories-icons"
                         />
                         Электрика
@@ -56,7 +56,7 @@
                         <img
                           width="24"
                           height="24"
-                          src="img/categories-icons/1.svg"
+                          src="img/categories-icons/4.png"
                           alt="categories-icons"
                         />
                         Инженерные системы
@@ -67,7 +67,7 @@
                         <img
                           width="24"
                           height="24"
-                          src="img/categories-icons/1.svg"
+                          src="img/categories-icons/5.png"
                           alt="categories-icons"
                         />
                         Интерьер и отделка
@@ -78,7 +78,7 @@
                         <img
                           width="24"
                           height="24"
-                          src="img/categories-icons/1.svg"
+                          src="img/categories-icons/6.png"
                           alt="categories-icons"
                         />
                         Сантехника
@@ -89,7 +89,7 @@
                         <img
                           width="24"
                           height="24"
-                          src="img/categories-icons/1.svg"
+                          src="img/categories-icons/7.png"
                           alt="categories-icons"
                         />
                         Крепеж
@@ -100,7 +100,7 @@
                         <img
                           width="24"
                           height="24"
-                          src="img/categories-icons/1.svg"
+                          src="img/categories-icons/8.png"
                           alt="categories-icons"
                         />
                         Благоустройство
@@ -111,7 +111,7 @@
                         <img
                           width="24"
                           height="24"
-                          src="img/categories-icons/1.svg"
+                          src="img/categories-icons/9.png"
                           alt="categories-icons"
                         />
                         Все для сада
@@ -122,7 +122,7 @@
                         <img
                           width="24"
                           height="24"
-                          src="img/categories-icons/1.svg"
+                          src="img/categories-icons/10.png"
                           alt="categories-icons"
                         />
                         Новинки
@@ -348,7 +348,7 @@
                                 required
                               />
                               <span class="checkbox__box"></span>
-                              <span class="checkbox__text">40</span>
+                              <span class="checkbox__text">1,4</span>
                             </label>
                           </li>
                           <li class="filters-box__item">
@@ -359,7 +359,7 @@
                                 required
                               />
                               <span class="checkbox__box"></span>
-                              <span class="checkbox__text">470</span>
+                              <span class="checkbox__text">1,5</span>
                             </label>
                           </li>
                           <li class="filters-box__item">
@@ -370,7 +370,7 @@
                                 required
                               />
                               <span class="checkbox__box"></span>
-                              <span class="checkbox__text">650</span>
+                              <span class="checkbox__text">2,2</span>
                             </label>
                           </li>
                           <li class="filters-box__item">
@@ -381,7 +381,7 @@
                                 required
                               />
                               <span class="checkbox__box"></span>
-                              <span class="checkbox__text">720</span>
+                              <span class="checkbox__text">2,3</span>
                             </label>
                           </li>
                           <li class="filters-box__item">
@@ -392,7 +392,7 @@
                                 required
                               />
                               <span class="checkbox__box"></span>
-                              <span class="checkbox__text">780</span>
+                              <span class="checkbox__text">2,3</span>
                             </label>
                           </li>
                         </ul>
@@ -450,7 +450,25 @@
                 </article>
               </div>
             </div>
-            <div class="grid__right">@include('./components/_brand.html')</div>
+            <div class="grid__right">
+              <div class="breadcrumbs">
+                <ul class="breadcrumbs__list">
+                  <li class="breadcrumbs__item">
+                    <a class="breadcrumbs__link" href="index.html">Главная</a>
+                  </li>
+                  <li class="breadcrumbs__item">
+                    <a class="breadcrumbs__link"> Бренды </a>
+                  </li>
+                  <li class="breadcrumbs__item">
+                    <a class="breadcrumbs__link breadcrumbs__link--active">
+                      Булат
+                    </a>
+                  </li>
+                </ul>
+              </div>
+
+              @include('./components/_brand.html')
+            </div>
           </div>
         </div>
       </main>
@@ -460,11 +478,3 @@
     @include('./components/base/_scripts.html')
   </body>
 </html>
-
-<!-- <label class="checkbox">
-  <input class="checkbox__input" type="checkbox" required />
-  <span class="checkbox__box"></span>
-  <span class="checkbox__text">
-    Соглашаюсь с<a href="#"> обработкой персональных данных</a>
-  </span> 
-</label> -->

@@ -9,128 +9,13 @@
     @include('./components/_popups.html')
 
     <div class="site-wrapper">
-      <!-- @include('./components/_header.html') -->
+      @include('./components/_header.html')
 
       <main class="main">
         <div class="container">
           <div class="grid">
             <div class="grid__left">
               <div class="side">
-                <div class="side__box">
-                  <ul class="side__list">
-                    <li class="side__item">
-                      <a class="side__link" href="#">
-                        <img
-                          width="24"
-                          height="24"
-                          src="img/categories-icons/1.svg"
-                          alt="categories-icons"
-                        />
-                        Стройматериалы
-                      </a>
-                    </li>
-                    <li class="side__item">
-                      <a class="side__link" href="#">
-                        <img
-                          width="24"
-                          height="24"
-                          src="img/categories-icons/1.svg"
-                          alt="categories-icons"
-                        />
-                        Инструмент
-                      </a>
-                    </li>
-                    <li class="side__item">
-                      <a class="side__link" href="#">
-                        <img
-                          width="24"
-                          height="24"
-                          src="img/categories-icons/1.svg"
-                          alt="categories-icons"
-                        />
-                        Электрика
-                      </a>
-                    </li>
-                    <li class="side__item">
-                      <a class="side__link" href="#">
-                        <img
-                          width="24"
-                          height="24"
-                          src="img/categories-icons/1.svg"
-                          alt="categories-icons"
-                        />
-                        Инженерные системы
-                      </a>
-                    </li>
-                    <li class="side__item">
-                      <a class="side__link" href="#">
-                        <img
-                          width="24"
-                          height="24"
-                          src="img/categories-icons/1.svg"
-                          alt="categories-icons"
-                        />
-                        Интерьер и отделка
-                      </a>
-                    </li>
-                    <li class="side__item">
-                      <a class="side__link" href="#">
-                        <img
-                          width="24"
-                          height="24"
-                          src="img/categories-icons/1.svg"
-                          alt="categories-icons"
-                        />
-                        Сантехника
-                      </a>
-                    </li>
-                    <li class="side__item">
-                      <a class="side__link" href="#">
-                        <img
-                          width="24"
-                          height="24"
-                          src="img/categories-icons/1.svg"
-                          alt="categories-icons"
-                        />
-                        Крепеж
-                      </a>
-                    </li>
-                    <li class="side__item">
-                      <a class="side__link" href="#">
-                        <img
-                          width="24"
-                          height="24"
-                          src="img/categories-icons/1.svg"
-                          alt="categories-icons"
-                        />
-                        Благоустройство
-                      </a>
-                    </li>
-                    <li class="side__item">
-                      <a class="side__link" href="#">
-                        <img
-                          width="24"
-                          height="24"
-                          src="img/categories-icons/1.svg"
-                          alt="categories-icons"
-                        />
-                        Все для сада
-                      </a>
-                    </li>
-                    <li class="side__item">
-                      <a class="side__link" href="#">
-                        <img
-                          width="24"
-                          height="24"
-                          src="img/categories-icons/1.svg"
-                          alt="categories-icons"
-                        />
-                        Новинки
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-
                 <div class="side__filters">
                   <div class="filters-box">
                     <ul class="filters-box__list">
@@ -348,7 +233,7 @@
                                 required
                               />
                               <span class="checkbox__box"></span>
-                              <span class="checkbox__text">40</span>
+                              <span class="checkbox__text">1,4</span>
                             </label>
                           </li>
                           <li class="filters-box__item">
@@ -359,7 +244,7 @@
                                 required
                               />
                               <span class="checkbox__box"></span>
-                              <span class="checkbox__text">470</span>
+                              <span class="checkbox__text">1,5</span>
                             </label>
                           </li>
                           <li class="filters-box__item">
@@ -370,7 +255,7 @@
                                 required
                               />
                               <span class="checkbox__box"></span>
-                              <span class="checkbox__text">650</span>
+                              <span class="checkbox__text">2,2</span>
                             </label>
                           </li>
                           <li class="filters-box__item">
@@ -381,7 +266,7 @@
                                 required
                               />
                               <span class="checkbox__box"></span>
-                              <span class="checkbox__text">720</span>
+                              <span class="checkbox__text">2,3</span>
                             </label>
                           </li>
                           <li class="filters-box__item">
@@ -392,7 +277,7 @@
                                 required
                               />
                               <span class="checkbox__box"></span>
-                              <span class="checkbox__text">780</span>
+                              <span class="checkbox__text">2,3</span>
                             </label>
                           </li>
                         </ul>
@@ -451,7 +336,28 @@
               </div>
             </div>
             <div class="grid__right">
+              <div class="breadcrumbs">
+                <ul class="breadcrumbs__list">
+                  <li class="breadcrumbs__item">
+                    <a class="breadcrumbs__link" href="index.html">Главная</a>
+                  </li>
+                  <li class="breadcrumbs__item">
+                    <a class="breadcrumbs__link"> Каталог товаров </a>
+                  </li>
+
+                  <li class="breadcrumbs__item">
+                    <a class="breadcrumbs__link"> Инструмент </a>
+                  </li>
+                  <li class="breadcrumbs__item">
+                    <a class="breadcrumbs__link breadcrumbs__link--active">
+                      Электроинструмент
+                    </a>
+                  </li>
+                </ul>
+              </div>
+
               @include('./components/_subcategories.html')
+              @include('./components/_products-subcategories.html')
             </div>
           </div>
         </div>

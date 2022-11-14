@@ -15,3 +15,5 @@
 Карточка товара: https://vsulimovvv.github.io/brigadir/app/order.html  
 Категории: https://vsulimovvv.github.io/brigadir/app/categories.html  
 Подкатегории: https://vsulimovvv.github.io/brigadir/app/subcategories.html  
+Подкатегории 2-го уровня: https://vsulimovvv.github.io/brigadir/app/subcategories-2.html  
+Каталог: https://vsulimovvv.github.io/brigadir/app/catalog.html  
