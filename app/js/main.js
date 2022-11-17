@@ -486,39 +486,62 @@ window.addEventListener('DOMContentLoaded', () => {
     });
   })();
 
-  //   // * ===== Modal
-  //   (function modals() {
-  //     function bindModal(openBtn, modal, close) {
-  //       const openBtnEl = document.querySelectorAll(openBtn);
-  //       const modalEl = document.querySelector(modal);
-  //       const closeEl = document.querySelectorAll(close);
-  //       const body = document.querySelector('body');
-  //       if (modalEl) {
-  //         openBtnEl.forEach((el) => {
-  //           el.addEventListener('click', (e) => {
-  //             if (e.target) {
-  //               e.preventDefault();
-  //             }
-  //             modalEl.classList.add('active');
-  //             body.classList.add('no-scroll');
-  //           });
-  //         });
-  //         closeEl.forEach((btn) => {
-  //           btn.addEventListener('click', (e) => {
-  //             modalEl.classList.remove('active');
-  //             body.classList.remove('no-scroll');
-  //           });
-  //         });
-  //         modalEl.addEventListener('click', (e) => {
-  //           if (e.target === modalEl) {
-  //             modalEl.classList.remove('active');
-  //             body.classList.remove('no-scroll');
-  //           }
-  //         });
-  //       }
-  //     }
-  //     bindModal('.online-booking-btn', '.popup--online-booking', '.popup__close');
-  //   })();
+  // * ===== Modal
+  (function modals() {
+    function bindModal(openBtn, modal, close) {
+      const openBtnEl = document.querySelectorAll(openBtn);
+      const modalEl = document.querySelector(modal);
+      const closeEl = document.querySelectorAll(close);
+      const body = document.querySelector('body');
+      if (modalEl) {
+        openBtnEl.forEach((el) => {
+          el.addEventListener('click', (e) => {
+            if (e.target) {
+              e.preventDefault();
+            }
+            modalEl.classList.add('active');
+            body.classList.add('no-scroll');
+          });
+        });
+        closeEl.forEach((btn) => {
+          btn.addEventListener('click', (e) => {
+            modalEl.classList.remove('active');
+            body.classList.remove('no-scroll');
+          });
+        });
+        modalEl.addEventListener('click', (e) => {
+          if (e.target === modalEl) {
+            modalEl.classList.remove('active');
+            body.classList.remove('no-scroll');
+          }
+        });
+      }
+    }
+    bindModal('.btn-reg-mail', '.popup--registration', '.popup__close');
+    bindModal('.btn-reg-phone', '.popup--registration', '.popup__close');
+    bindModal('.btn-reset-pas', '.popup--restore-pas', '.popup__close');
+  })();
+
+  // * ===== Show Hide Password
+  (function show_hide_password() {
+    const formGroups = document.querySelectorAll('.form-submit__group');
+
+    formGroups.forEach((group) => {
+      if (group) {
+        group.addEventListener('click', (e) => {
+          if (!e.target.closest('.form-submit__show-password')) return;
+
+          const input = document.querySelector('.input-password');
+
+          if (input.getAttribute('type') == 'password') {
+            input.setAttribute('type', 'text');
+          } else {
+            input.setAttribute('type', 'password');
+          }
+        });
+      }
+    });
+  })();
 
   // * ===== Toggle Tabs
   function someTabs(headerSelector, tabSelector, contentSelector, activeClass) {
@@ -560,6 +583,12 @@ window.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
+  // someTabs(
+  //   '.grid-content',
+  //   '.grid-btn',
+  //   '.grid-panel',
+  //   'active'
+  // );
   someTabs(
     '.products-grid__content',
     '.products-grid__btn',
@@ -609,13 +638,19 @@ window.addEventListener('DOMContentLoaded', () => {
   }
   someTabs('.help__tabs', '.help-tabs__btn', '.help-tabs__content', 'active');
   someTabs('.brand', '.sort__btn', '.brand-products__panel', 'active');
-  someTabs('.order__left', '.order-box__item', '.order-box__content', 'active');
+  someTabs(
+    '.order__left',
+    '.order-box__inner',
+    '.order-box__content',
+    'active'
+  );
   someTabs(
     '.product-tabs',
     '.product-tabs__top-btn',
     '.product-tabs__content',
     'active'
   );
+  someTabs('.mobile-grid', '.mobile-grid-btn', '.mobile-grid-panel', 'active');
   someTabs(
     '.dropdown-catalog',
     '.dropdown-catalog__btn',
