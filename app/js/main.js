@@ -255,41 +255,41 @@ window.addEventListener('DOMContentLoaded', () => {
   })();
 
   // * ===== Slider
-  (function slider() {
-    const sliderEl = document.querySelectorAll('.products-grid__slider');
-    sliderEl.forEach((el) => {
-      if (el) {
-        new Swiper(el, {
-          slidesPerView: 'auto',
-          spaceBetween: 60,
-          grid: {
-            rows: 2,
-            fill: 'row',
-          },
-          pagination: {
-            el: '.swiper-pagination',
-            type: 'progressbar',
-          },
-          breakpoints: {
-            319: {
-              spaceBetween: 20,
-              grid: {
-                rows: 1,
-                fill: 'row',
-              },
-            },
-            991: {
-              spaceBetween: 32,
-              grid: {
-                rows: 2,
-                fill: 'row',
-              },
-            },
-          },
-        });
-      }
-    });
-  })();
+  // (function slider() {
+  //   const sliderEl = document.querySelectorAll('.products-grid__slider');
+  //   sliderEl.forEach((el) => {
+  //     if (el) {
+  //       new Swiper(el, {
+  //         slidesPerView: 'auto',
+  //         spaceBetween: 60,
+  //         grid: {
+  //           rows: 2,
+  //           fill: 'row',
+  //         },
+  //         pagination: {
+  //           el: '.swiper-pagination',
+  //           type: 'progressbar',
+  //         },
+  //         breakpoints: {
+  //           319: {
+  //             spaceBetween: 20,
+  //             grid: {
+  //               rows: 1,
+  //               fill: 'row',
+  //             },
+  //           },
+  //           991: {
+  //             spaceBetween: 32,
+  //             grid: {
+  //               rows: 2,
+  //               fill: 'row',
+  //             },
+  //           },
+  //         },
+  //       });
+  //     }
+  //   });
+  // })();
 
   // * ==== Single Product
   (function verticalSlider() {
