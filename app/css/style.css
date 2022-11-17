@@ -533,6 +533,7 @@ body.no-scroll {
 .side__filters {
   padding: 17px;
   background-color: var(--color-white);
+  margin-bottom: 65px;
 }
 .side__blocks {
   margin-bottom: 65px;
