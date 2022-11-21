@@ -1122,7 +1122,7 @@
             required
           />
         </div>
-        <div class="form-submit__group">
+        <div class="form-submit__group form-group">
           <label class="form-submit__label"> Пароль </label>
 
           <input
@@ -1130,7 +1130,7 @@
             type="password"
             required
           />
-          <button class="form-submit__show-password" type="button">
+          <button class="form-submit__show-password show-pas" type="button">
             <svg
               width="21"
               height="20"
@@ -1190,7 +1190,7 @@
       </svg>
     </button>
     <div class="popup__wrapper">
-      <span class="popup__title">Регистрацияя</span>
+      <span class="popup__title">Регистрация</span>
 
       <form class="form-submit">
         <div class="form-submit__group">
@@ -1198,7 +1198,6 @@
 
           <input
             class="form-submit__input"
-            id="login-email"
             type="text"
             placeholder="ФИО"
             required
@@ -1249,7 +1248,7 @@
       </svg>
     </button>
     <div class="popup__wrapper">
-      <span class="popup__title">Востановить пароль</span>
+      <span class="popup__title">Восстановить пароль</span>
       <p class="popup__text">Если вы забыли пароль, введите e-mail</p>
 
       <form class="form-submit">
@@ -2677,7 +2676,7 @@
                 </svg>
                 <div>
                   <span>8 831 713 50 50</span>
-                <span>Заказать звонок</span>
+                  <span>Заказать звонок</span>
                 </div>
               </a>
             </li>
@@ -2726,11 +2725,41 @@
                       </label>
                       <input class="login-dropdown__input" type="text" />
                     </div>
-                    <div class="login-dropdown__group">
+                    <div class="login-dropdown__group form-group">
                       <label class="login-dropdown__label" for="">
                         Пароль
                       </label>
-                      <input class="login-dropdown__input" type="password" />
+                      <input
+                        class="login-dropdown__input input-password"
+                        type="password"
+                      />
+                      <button
+                        class="login-dropdown__show-pas show-pas"
+                        type="button"
+                      >
+                        <svg
+                          width="21"
+                          height="20"
+                          viewBox="0 0 21 20"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M10.5 4.375C16.75 4.375 19.25 10 19.25 10C19.25 10 16.75 15.625 10.5 15.625C4.25 15.625 1.75 10 1.75 10C1.75 10 4.25 4.375 10.5 4.375Z"
+                            stroke="#222222"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                          <path
+                            d="M10.5 13.125C8.77411 13.125 7.375 11.7259 7.375 10C7.375 8.27411 8.77411 6.875 10.5 6.875C12.2259 6.875 13.625 8.27411 13.625 10C13.625 11.7259 12.2259 13.125 10.5 13.125Z"
+                            stroke="black"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                      </button>
                     </div>
                     <button class="login-dropdown__btn btn" type="submit">
                       <svg
@@ -2751,14 +2780,23 @@
                   </div>
                 </form>
                 <div class="login-dropdown__links">
-                  <button class="login-dropdown__link btn-reg-mail" type="button">
+                  <button
+                    class="login-dropdown__link btn-reg-mail"
+                    type="button"
+                  >
                     Регистрация по почте
                   </button>
-                  <button class="login-dropdown__link btn-reg-phone" type="button">
+                  <button
+                    class="login-dropdown__link btn-reg-phone"
+                    type="button"
+                  >
                     Регистрация по телефону
                   </button>
                 </div>
-                <button class="login-dropdown__reset btn-reset-pas" type="button">
+                <button
+                  class="login-dropdown__reset btn-reset-pas"
+                  type="button"
+                >
                   Забыли пароль?
                 </button>
               </div>
@@ -3007,9 +3045,9 @@
 </header>
 
 
-      <main class="main">
+      <main class="main mt">
         <div class="container">
-          <div class="grid">
+          <div class="grid ">
             <div class="grid__left">
               <div class="side">
                 <div class="side__filters">
@@ -3434,17 +3472,72 @@
   <div class="type-slider">
     <div class="type-slider__slider swiper">
       <ul class="type-slider__slides swiper-wrapper">
-        <li class="type-slider__slide swiper-slide">КМ</li>
-        <li class="type-slider__slide swiper-slide">Makita</li>
-        <li class="type-slider__slide swiper-slide">DeWait</li>
-        <li class="type-slider__slide swiper-slide">Bosh</li>
-        <li class="type-slider__slide swiper-slide">Metabo</li>
-        <li class="type-slider__slide swiper-slide">Einhell</li>
-        <li class="type-slider__slide swiper-slide">Li-Ion</li>
-        <li class="type-slider__slide swiper-slide">Интерскол</li>
-        <li class="type-slider__slide swiper-slide">Karcher</li>
-        <li class="type-slider__slide swiper-slide">Зубр</li>
-        <li class="type-slider__slide swiper-slide">Лобзик</li>
+        <li class="type-slider__slide swiper-slide">
+          <label class="type-slider__checkbox checkbox">
+            <input class="checkbox__input" type="checkbox" required checked />
+            <span class="checkbox__text"> КМ </span>
+          </label>
+        </li>
+        <li class="type-slider__slide swiper-slide">
+          <label class="type-slider__checkbox checkbox">
+            <input class="checkbox__input" type="checkbox" required />
+            <span class="checkbox__text"> Makita </span>
+          </label>
+        </li>
+        <li class="type-slider__slide swiper-slide">
+          <label class="type-slider__checkbox checkbox">
+            <input class="checkbox__input" type="checkbox" required />
+            <span class="checkbox__text"> DeWait </span>
+          </label>
+        </li>
+        <li class="type-slider__slide swiper-slide">
+          <label class="type-slider__checkbox checkbox">
+            <input class="checkbox__input" type="checkbox" required />
+            <span class="checkbox__text"> Bosh </span>
+          </label>
+        </li>
+        <li class="type-slider__slide swiper-slide">
+          <label class="type-slider__checkbox checkbox">
+            <input class="checkbox__input" type="checkbox" required />
+            <span class="checkbox__text"> Metabo </span>
+          </label>
+        </li>
+        <li class="type-slider__slide swiper-slide">
+          <label class="type-slider__checkbox checkbox">
+            <input class="checkbox__input" type="checkbox" required />
+            <span class="checkbox__text"> Einhell </span>
+          </label>
+        </li>
+        <li class="type-slider__slide swiper-slide">
+          <label class="type-slider__checkbox checkbox">
+            <input class="checkbox__input" type="checkbox" required />
+            <span class="checkbox__text"> Li-Ion </span>
+          </label>
+        </li>
+        <li class="type-slider__slide swiper-slide">
+          <label class="type-slider__checkbox checkbox">
+            <input class="checkbox__input" type="checkbox" required />
+            <span class="checkbox__text"> Интерскол </span>
+          </label>
+        </li>
+        <li class="type-slider__slide swiper-slide">
+          <label class="type-slider__checkbox checkbox">
+            <input class="checkbox__input" type="checkbox" required />
+            <span class="checkbox__text"> Karcher </span>
+          </label>
+        </li>
+        <li class="type-slider__slide swiper-slide">
+          <label class="type-slider__checkbox checkbox">
+            <input class="checkbox__input" type="checkbox" required />
+            <span class="checkbox__text"> Зубр </span>
+          </label>
+        </li>
+        <li class="type-slider__slide swiper-slide">
+          <label class="type-slider__checkbox checkbox">
+            <input class="checkbox__input" type="checkbox" required />
+            <span class="checkbox__text"> Лобзик </span>
+          </label>
+        </li>
       </ul>
     </div>
   </div>
@@ -15114,19 +15207,13 @@
               <li class="footer__item">
                 <a class="footer__link" href="#">Контакты</a>
               </li>
-              <li class="footer__item">
-                <a class="footer__link" href="#">Лицензии</a>
-              </li>
-              <li class="footer__item">
-                <a class="footer__link" href="#">Благодарственные </a>
-              </li>
             </ul>
           </div>
           <div class="footer__col">
             <a class="footer__name" href="#">Помощь</a>
             <ul class="footer__list">
               <li class="footer__item">
-                <a class="footer__link" href="#">Вопрос ответ</a>
+                <a class="footer__link" href="#">Вопрос - ответ</a>
               </li>
             </ul>
           </div>
@@ -15198,7 +15285,7 @@
               />
             </svg>
 
-            <address>г.Павлово, ул.Чкалова, 49</address>
+            <address>г. Павлово, ул. Чкалова, 49</address>
           </li>
           <li class="footer-contacts__item">
             <svg
@@ -15247,7 +15334,9 @@
               />
             </svg>
 
-            <a class="footer-contacts__link" href="#">b.brigadirov@yandex.ru</a>
+            <a class="footer-contacts__link" href="mailto:brigabir152@mail.ru ">
+              brigabir152@mail.ru
+            </a>
           </li>
           <li class="footer-contacts__item">
             <svg
@@ -15810,12 +15899,35 @@
         </li>
         <li class="bottom-nav__item swiper-slide">
           <a class="bottom-nav__link">
-            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M12 23L4 25V7L12 5" stroke="#222222" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M20 27L12 23V5L20 9V27Z" stroke="#222222" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M20 9L28 7V25L20 27" stroke="#222222" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-              
+            <svg
+              width="32"
+              height="32"
+              viewBox="0 0 32 32"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12 23L4 25V7L12 5"
+                stroke="#222222"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M20 27L12 23V5L20 9V27Z"
+                stroke="#222222"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M20 9L28 7V25L20 27"
+                stroke="#222222"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
 
             <span>Контакты</span>
           </a>
@@ -15862,6 +15974,9 @@
   crossorigin="anonymous"
   referrerpolicy="no-referrer"
 ></script>
+
+<script src="https://unpkg.com/js-image-zoom@0.7.0/js-image-zoom.js" type="application/javascript"></script>
+
 
 <!-- fancybox -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>

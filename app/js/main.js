@@ -4,6 +4,28 @@ window.addEventListener('DOMContentLoaded', () => {
 
   //  * ===== Nice Select
   $('select').niceSelect();
+  // var options = {
+  //   width: 400,
+  //   height:250,
+  //   zoomWidth: 500,
+  //   offset: {vertical: 0, horizontal: 10},
+  //   // offset: { vertical: 0, horizontal: 10 },
+  //   zoomPosition: 'original',
+  // };
+  // const imgZoom = document.querySelectorAll('.slider-thumbs__img');
+
+  // imgZoom.forEach((el) => {
+  //   new ImageZoom(el, options);
+  // });
+
+  function zoom(e) {
+    var zoomer = e.currentTarget;
+    e.offsetX ? (offsetX = e.offsetX) : (offsetX = e.touches[0].pageX);
+    e.offsetY ? (offsetY = e.offsetY) : (offsetX = e.touches[0].pageX);
+    x = (offsetX / zoomer.offsetWidth) * 100;
+    y = (offsetY / zoomer.offsetHeight) * 100;
+    zoomer.style.backgroundPosition = x + '% ' + y + '%';
+  }
 
   // * ===== Slider
   (function slider() {
@@ -254,43 +276,6 @@ window.addEventListener('DOMContentLoaded', () => {
     });
   })();
 
-  // * ===== Slider
-  // (function slider() {
-  //   const sliderEl = document.querySelectorAll('.products-grid__slider');
-  //   sliderEl.forEach((el) => {
-  //     if (el) {
-  //       new Swiper(el, {
-  //         slidesPerView: 'auto',
-  //         spaceBetween: 60,
-  //         grid: {
-  //           rows: 2,
-  //           fill: 'row',
-  //         },
-  //         pagination: {
-  //           el: '.swiper-pagination',
-  //           type: 'progressbar',
-  //         },
-  //         breakpoints: {
-  //           319: {
-  //             spaceBetween: 20,
-  //             grid: {
-  //               rows: 1,
-  //               fill: 'row',
-  //             },
-  //           },
-  //           991: {
-  //             spaceBetween: 32,
-  //             grid: {
-  //               rows: 2,
-  //               fill: 'row',
-  //             },
-  //           },
-  //         },
-  //       });
-  //     }
-  //   });
-  // })();
-
   // * ==== Single Product
   (function verticalSlider() {
     let mySwiperNav = new Swiper('#slider-nav', {
@@ -523,21 +508,22 @@ window.addEventListener('DOMContentLoaded', () => {
   })();
 
   // * ===== Show Hide Password
-  (function show_hide_password() {
-    const formGroups = document.querySelectorAll('.form-submit__group');
+  (function showHidePassword() {
+    const formGroups = document.querySelectorAll('.form-group');
 
     formGroups.forEach((group) => {
       if (group) {
         group.addEventListener('click', (e) => {
-          if (!e.target.closest('.form-submit__show-password')) return;
+          if (!e.target.closest('.show-pas')) return;
 
-          const input = document.querySelector('.input-password');
-
-          if (input.getAttribute('type') == 'password') {
-            input.setAttribute('type', 'text');
-          } else {
-            input.setAttribute('type', 'password');
-          }
+          const input = document.querySelectorAll('.input-password');
+          input.forEach((el) => {
+            if (el.getAttribute('type') == 'password') {
+              el.setAttribute('type', 'text');
+            } else {
+              el.setAttribute('type', 'password');
+            }
+          });
         });
       }
     });
@@ -583,12 +569,7 @@ window.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
-  // someTabs(
-  //   '.grid-content',
-  //   '.grid-btn',
-  //   '.grid-panel',
-  //   'active'
-  // );
+
   someTabs(
     '.products-grid__content',
     '.products-grid__btn',
