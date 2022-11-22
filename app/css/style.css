@@ -5658,12 +5658,15 @@ body.no-scroll {
   margin-bottom: 10px;
 }
 
+.banners__slider {
+  margin: 0 auto;
+}
 .banners__slide {
   width: 526px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
-@media (max-width: 1920px) {
+@media (max-width: 1440px) {
   .banners__slide {
     width: calc(333px + 193 * (100vw - 360px) / 1560);
   }
@@ -6963,6 +6966,7 @@ body.no-scroll {
 
 .brand {
   padding-bottom: 60px;
+  padding-top: 16px;
 }
 .brand__top {
   display: -ms-grid;

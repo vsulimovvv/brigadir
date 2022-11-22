@@ -224,6 +224,14 @@ window.addEventListener('DOMContentLoaded', () => {
     const sliderEl = document.querySelector('.banners__slider');
     new Swiper(sliderEl, {
       slidesPerView: 'auto',
+      // breakpoints: {
+      //   2400: {
+      //     slidesPerView: 3,
+      //   },
+      //   1800: {
+      //     slidesPerView: 'auto',
+      //   },
+      // },
     });
   })();
 
