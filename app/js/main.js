@@ -27,6 +27,35 @@ window.addEventListener('DOMContentLoaded', () => {
     zoomer.style.backgroundPosition = x + '% ' + y + '%';
   }
 
+  // * ==== Show Reviews
+  (function showTextReviews() {
+    const parentContainer = document.querySelector('.reviews__content');
+    if (parentContainer) {
+      parentContainer.addEventListener('click', (e) => {
+        const current = e.target;
+        const isReadMoreBtn = current.className.includes('reviews-card__more');
+        if (!isReadMoreBtn) return;
+
+        const currentText =
+          e.target.parentNode.querySelector('.read-more-text');
+
+        currentText.classList.toggle('show');
+
+        if (currentText.classList.contains('show')) {
+          current.textContent = 'Скрыть';
+          document.querySelector('i').style.display = 'none';
+        } else {
+          current.textContent = 'Читать далее';
+          document.querySelector('i').style.display = 'inline';
+        }
+
+        // currentText.classList.contains('show')
+        //   ? (current.textContent = 'Скрыть')
+        //   : (current.textContent = 'Читать далее');
+      });
+    }
+  })();
+
   // * ===== Slider
   (function slider() {
     const sliderEl = document.querySelector('.advantages__slider');
@@ -323,10 +352,19 @@ window.addEventListener('DOMContentLoaded', () => {
   (function fixedHeader() {
     function scrollHeader() {
       const nav = document.querySelector('header');
+      const fixedCatalog = document.querySelectorAll('.dropdown-catalog');
+
       if (this.scrollY >= 100) {
         nav.classList.add('scroll-header');
+
+        fixedCatalog.forEach((el) => {
+          el.classList.add('scroll-catalog');
+        });
       } else {
         nav.classList.remove('scroll-header');
+        fixedCatalog.forEach((el) => {
+          el.classList.remove('scroll-catalog');
+        });
       }
     }
 
@@ -335,8 +373,13 @@ window.addEventListener('DOMContentLoaded', () => {
     // ! Change
     function changeBg() {
       const header = document.querySelector('header');
+      const fixedCatalog = document.querySelectorAll('.dropdown-catalog');
       if (window.pageYOffset >= 100) {
         header.classList.add('scroll-header');
+
+        fixedCatalog.forEach((el) => {
+          el.classList.add('scroll-catalog');
+        });
       }
     }
 
@@ -510,8 +553,8 @@ window.addEventListener('DOMContentLoaded', () => {
         });
       }
     }
-    bindModal('.btn-reg-mail', '.popup--registration', '.popup__close');
-    bindModal('.btn-reg-phone', '.popup--registration', '.popup__close');
+    bindModal('.btn-reg-mail', '.popup--registration-email', '.popup__close');
+    bindModal('.btn-reg-phone', '.popup--registration-phone', '.popup__close');
     bindModal('.btn-reset-pas', '.popup--restore-pas', '.popup__close');
   })();
 

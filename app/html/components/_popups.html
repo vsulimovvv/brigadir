@@ -1126,7 +1126,56 @@
   </div>
 </div>
 
-<div class="popup popup--registration">
+<div class="popup popup--registration-phone">
+  <div class="popup__container">
+    <button class="popup__close" type="button" aria-label="Закрыть">
+      <svg width="15" height="15">
+        <use xlink:href="img/sprite.svg#close"></use>
+      </svg>
+    </button>
+    <div class="popup__wrapper">
+      <span class="popup__title">Регистрация</span>
+
+      <form class="form-submit">
+        <div class="form-submit__group">
+          <label class="form-submit__label"> Ваше имя </label>
+
+          <input
+            class="form-submit__input"
+            type="text"
+            placeholder="ФИО"
+            required
+          />
+        </div>
+
+        <div class="form-submit__group">
+          <label class="form-submit__label"> Ваш номер телефона </label>
+
+          <input
+            class="form-submit__input"
+            type="tel"
+            placeholder="+7 ( _ _ _ ) _ _ _ - _ _ - _ _"
+            required
+          />
+        </div>
+
+        <div class="form-submit__group">
+          <button class="form-submit__btn btn">Зарегистрироваться</button>
+
+          <label class="checkbox">
+            <input class="checkbox__input" type="checkbox" required checked />
+            <span class="checkbox__box"></span>
+            <span class="checkbox__text"
+              >Даю согласие на обработку персональных данных</span
+            >
+          </label>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div class="popup popup--registration-email">
   <div class="popup__container">
     <button class="popup__close" type="button" aria-label="Закрыть">
       <svg width="15" height="15">
@@ -1157,16 +1206,6 @@
             required
           />
         </div>
-        <div class="form-submit__group">
-          <label class="form-submit__label"> Ваш номер телефона </label>
-
-          <input
-            class="form-submit__input"
-            type="tel"
-            placeholder="+7 ( _ _ _ ) _ _ _ - _ _ - _ _"
-            required
-          />
-        </div>
 
         <div class="form-submit__group">
           <button class="form-submit__btn btn">Зарегистрироваться</button>
@@ -1193,23 +1232,18 @@
     </button>
     <div class="popup__wrapper">
       <span class="popup__title">Восстановить пароль</span>
-      <p class="popup__text">Если вы забыли пароль, введите e-mail</p>
+      <p class="popup__text">
+        Если вы забыли пароль, введите e-mail или телефон
+      </p>
 
       <form class="form-submit">
         <div class="form-submit__group">
-          <label class="form-submit__label">Е-mail</label>
+          <label class="form-submit__label">
+            Ваш номер e-mail или телефона
+          </label>
 
-          <input
-            class="form-submit__input"
-            type="email"
-            placeholder="Адрес вашей электронной почты"
-            required
-          />
+          <input class="form-submit__input" type="text" required />
         </div>
-        <p class="form-submit__text">
-          Контрольная строка для смены парля а также ваши регистрационные
-          данные, будут высланы вам по e-mail
-        </p>
 
         <div class="form-submit__group">
           <button class="form-submit__btn btn">Зарегистрироваться</button>

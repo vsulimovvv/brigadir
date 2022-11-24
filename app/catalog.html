@@ -1182,7 +1182,56 @@
   </div>
 </div>
 
-<div class="popup popup--registration">
+<div class="popup popup--registration-phone">
+  <div class="popup__container">
+    <button class="popup__close" type="button" aria-label="Закрыть">
+      <svg width="15" height="15">
+        <use xlink:href="img/sprite.svg#close"></use>
+      </svg>
+    </button>
+    <div class="popup__wrapper">
+      <span class="popup__title">Регистрация</span>
+
+      <form class="form-submit">
+        <div class="form-submit__group">
+          <label class="form-submit__label"> Ваше имя </label>
+
+          <input
+            class="form-submit__input"
+            type="text"
+            placeholder="ФИО"
+            required
+          />
+        </div>
+
+        <div class="form-submit__group">
+          <label class="form-submit__label"> Ваш номер телефона </label>
+
+          <input
+            class="form-submit__input"
+            type="tel"
+            placeholder="+7 ( _ _ _ ) _ _ _ - _ _ - _ _"
+            required
+          />
+        </div>
+
+        <div class="form-submit__group">
+          <button class="form-submit__btn btn">Зарегистрироваться</button>
+
+          <label class="checkbox">
+            <input class="checkbox__input" type="checkbox" required checked />
+            <span class="checkbox__box"></span>
+            <span class="checkbox__text"
+              >Даю согласие на обработку персональных данных</span
+            >
+          </label>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div class="popup popup--registration-email">
   <div class="popup__container">
     <button class="popup__close" type="button" aria-label="Закрыть">
       <svg width="15" height="15">
@@ -1213,16 +1262,6 @@
             required
           />
         </div>
-        <div class="form-submit__group">
-          <label class="form-submit__label"> Ваш номер телефона </label>
-
-          <input
-            class="form-submit__input"
-            type="tel"
-            placeholder="+7 ( _ _ _ ) _ _ _ - _ _ - _ _"
-            required
-          />
-        </div>
 
         <div class="form-submit__group">
           <button class="form-submit__btn btn">Зарегистрироваться</button>
@@ -1249,23 +1288,18 @@
     </button>
     <div class="popup__wrapper">
       <span class="popup__title">Восстановить пароль</span>
-      <p class="popup__text">Если вы забыли пароль, введите e-mail</p>
+      <p class="popup__text">
+        Если вы забыли пароль, введите e-mail или телефон
+      </p>
 
       <form class="form-submit">
         <div class="form-submit__group">
-          <label class="form-submit__label">Е-mail</label>
+          <label class="form-submit__label">
+            Ваш номер e-mail или телефона
+          </label>
 
-          <input
-            class="form-submit__input"
-            type="email"
-            placeholder="Адрес вашей электронной почты"
-            required
-          />
+          <input class="form-submit__input" type="text" required />
         </div>
-        <p class="form-submit__text">
-          Контрольная строка для смены парля а также ваши регистрационные
-          данные, будут высланы вам по e-mail
-        </p>
 
         <div class="form-submit__group">
           <button class="form-submit__btn btn">Зарегистрироваться</button>
@@ -18717,45 +18751,34 @@
 
           <ul class="footer__list">
             <li class="footer__item">
-              <a class="footer__link" href="#">Двери</a>
+              <a class="footer__link" href="#">Стройматериалы</a>
             </li>
             <li class="footer__item">
-              <a class="footer__link" href="#"
-                >Электро бензо-инструмент и оснастка</a
-              >
+              <a class="footer__link" href="#"> Инструмент </a>
             </li>
             <li class="footer__item">
-              <a class="footer__link" href="#">Панели пвх и мдф</a>
+              <a class="footer__link" href="#"> Электрика </a>
             </li>
             <li class="footer__item">
-              <a class="footer__link" href="#">Сантехника, всё для бани</a>
+              <a class="footer__link" href="#"> Инженерные системы </a>
             </li>
             <li class="footer__item">
-              <a class="footer__link" href="#">Обои</a>
+              <a class="footer__link" href="#"> Иньтерьер и отделка </a>
             </li>
             <li class="footer__item">
-              <a class="footer__link" href="#">Напольные покрытия</a>
+              <a class="footer__link" href="#"> Сантехника </a>
             </li>
             <li class="footer__item">
-              <a class="footer__link" href="#">Керамическая плитка</a>
+              <a class="footer__link" href="#"> Крепеж </a>
             </li>
             <li class="footer__item">
-              <a class="footer__link" href="#">Крепеж</a>
+              <a class="footer__link" href="#"> Благоустройство </a>
             </li>
             <li class="footer__item">
-              <a class="footer__link" href="#">Лакокрасочная продукция</a>
+              <a class="footer__link" href="#"> Все для сада </a>
             </li>
             <li class="footer__item">
-              <a class="footer__link" href="#">Электрика и люстры</a>
-            </li>
-            <li class="footer__item">
-              <a class="footer__link" href="#">Бытовая техника</a>
-            </li>
-            <li class="footer__item">
-              <a class="footer__link" href="#">Блогоустройство</a>
-            </li>
-            <li class="footer__item">
-              <a class="footer__link" href="#">Строительные материалы</a>
+              <a class="footer__link" href="#"> Новинки </a>
             </li>
           </ul>
         </div>
