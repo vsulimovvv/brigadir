@@ -48,12 +48,33 @@ window.addEventListener('DOMContentLoaded', () => {
           current.textContent = 'Читать далее';
           document.querySelector('i').style.display = 'inline';
         }
-
-        // currentText.classList.contains('show')
-        //   ? (current.textContent = 'Скрыть')
-        //   : (current.textContent = 'Читать далее');
       });
     }
+  })();
+
+  // * ==== Show Delivery Options
+  (function showDeliveryOptions() {
+    const orderBoxText = document.querySelectorAll('.order-box__item');
+
+    orderBoxText.forEach((el) => {
+      if (el) {
+        document.querySelectorAll('.row-pickup').forEach((row) => {
+          row.style.display = 'none';
+        });
+
+        el.addEventListener('click', (e) => {
+          if (el.querySelector('.pickup').textContent === 'Самовывоз') {
+            document.querySelectorAll('.row-pickup').forEach((row) => {
+              row.style.display = 'none';
+            });
+          } else {
+            document.querySelectorAll('.row-pickup').forEach((row) => {
+              row.style.display = 'flex';
+            });
+          }
+        });
+      }
+    });
   })();
 
   // * ===== Slider
