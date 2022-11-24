@@ -5791,8 +5791,30 @@ body.no-scroll {
       -ms-flex-align: center;
           align-items: center;
 }
+@media (max-width: 767.98px) {
+  .help .help-tabs__list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+}
 .help .help-tabs__item:not(:last-child) {
   margin-right: 16px;
+}
+@media (max-width: 767.98px) {
+  .help .help-tabs__item:not(:last-child) {
+    margin-right: 0;
+    margin-bottom: 16px;
+  }
+}
+@media (max-width: 767.98px) {
+  .help .help-tabs__item {
+    width: 100%;
+  }
 }
 .help .help-tabs__btn {
   width: 186px;
@@ -5816,6 +5838,11 @@ body.no-scroll {
   -webkit-transition: 200ms ease;
   -o-transition: 200ms ease;
   transition: 200ms ease;
+}
+@media (max-width: 767.98px) {
+  .help .help-tabs__btn {
+    width: 100%;
+  }
 }
 .help .help-tabs__btn.active {
   color: var(--color-accent);
@@ -5850,22 +5877,14 @@ body.no-scroll {
 .help .help-accordion__control {
   padding-bottom: 25px;
   padding-top: 25px;
-  padding-right: 20px;
   padding-left: 20px;
+  padding-right: 40px;
   font-size: 22px;
 }
 @media (max-width: 1270px) {
   .help .help-accordion__control {
     padding-top: calc(
         15px + 10 *
-          ((100vw - 360px) / 910)
-      );
-  }
-}
-@media (max-width: 1270px) {
-  .help .help-accordion__control {
-    padding-right: calc(
-        10px + 10 *
           ((100vw - 360px) / 910)
       );
   }
@@ -5882,6 +5901,11 @@ body.no-scroll {
   right: 25px;
   width: 12px;
   height: 12px;
+}
+@media (max-width: 767.98px) {
+  .help .help-accordion__control::after {
+    right: 15px;
+  }
 }
 .help .help-accordion__content {
   font-size: 15px;
@@ -7297,6 +7321,12 @@ body.no-scroll {
   gap: 10px;
   margin-bottom: 35px;
 }
+@media (max-width: 767.98px) {
+  .order .order-box .types-transport__list {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+  }
+}
 .order .order-box .types-transport__form {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -7521,6 +7551,9 @@ body.no-scroll {
 .order .order-box__inner span {
   font-size: 17px;
   font-weight: 700;
+}
+.order .order-box__inner small {
+  display: block;
 }
 .order .order-box__inner:not(:last-child) {
   margin-right: 10px;
