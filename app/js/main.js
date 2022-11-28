@@ -4,28 +4,30 @@ window.addEventListener('DOMContentLoaded', () => {
 
   //  * ===== Nice Select
   $('select').niceSelect();
-  // var options = {
-  //   width: 400,
-  //   height:250,
-  //   zoomWidth: 500,
-  //   offset: {vertical: 0, horizontal: 10},
-  //   // offset: { vertical: 0, horizontal: 10 },
-  //   zoomPosition: 'original',
-  // };
-  // const imgZoom = document.querySelectorAll('.slider-thumbs__img');
 
-  // imgZoom.forEach((el) => {
-  //   new ImageZoom(el, options);
-  // });
+  // !
+  function zoomImgs() {
+    const container = document.querySelectorAll('.slider-thumbs__img');
 
-  function zoom(e) {
-    var zoomer = e.currentTarget;
-    e.offsetX ? (offsetX = e.offsetX) : (offsetX = e.touches[0].pageX);
-    e.offsetY ? (offsetY = e.offsetY) : (offsetX = e.touches[0].pageX);
-    x = (offsetX / zoomer.offsetWidth) * 100;
-    y = (offsetY / zoomer.offsetHeight) * 100;
-    zoomer.style.backgroundPosition = x + '% ' + y + '%';
+    container.forEach((el) => {
+      const img = el.querySelector('img');
+      if (el) {
+        el.addEventListener('mousemove', (e) => {
+          const x = e.clientX - e.target.offsetLeft;
+          const y = e.clientY - e.target.offsetTop;
+
+          img.style.transformOrigin = `${x}px ${y}px`;
+          img.style.transform = 'scale(1.8)';
+        });
+
+        el.addEventListener('mouseleave', () => {
+          img.style.transformOrigin = 'center';
+          img.style.transform = 'scale(1)';
+        });
+      }
+    });
   }
+  zoomImgs();
 
   // * ==== Show Reviews
   (function showTextReviews() {
@@ -123,6 +125,14 @@ window.addEventListener('DOMContentLoaded', () => {
       pagination: {
         el: document.querySelector('.bottom-nav__slider .swiper-pagination'),
         type: 'progressbar',
+      },
+      navigation: {
+        nextEl: document.querySelector(
+          '.bottom-nav__content .swiper-button-next'
+        ),
+        prevEl: document.querySelector(
+          '.bottom-nav__content .swiper-button-prev'
+        ),
       },
       spaceBetween: 28,
       slidesPerView: 'auto',
@@ -274,14 +284,6 @@ window.addEventListener('DOMContentLoaded', () => {
     const sliderEl = document.querySelector('.banners__slider');
     new Swiper(sliderEl, {
       slidesPerView: 'auto',
-      // breakpoints: {
-      //   2400: {
-      //     slidesPerView: 3,
-      //   },
-      //   1800: {
-      //     slidesPerView: 'auto',
-      //   },
-      // },
     });
   })();
 

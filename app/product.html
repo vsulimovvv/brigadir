@@ -46,6 +46,9 @@
   referrerpolicy="no-referrer"
 />
 
+<!--  -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+
 <!-- Custom Link -->
 <link rel="stylesheet" href="css/style.css" />
 
@@ -3090,27 +3093,63 @@
               <div class="slider-thumbs__nav-wrap swiper" id="slider-nav">
                 <ul class="swiper-wrapper">
                   <li class="swiper-slide slider-nav__slide">
-                    <img src="img/product-slider/1.png" alt="Слайд №1" />
+                    <picture>
+                      <source
+                        srcset="img/product-slider/1.png"
+                        type="image/webp"
+                      />
+                      <img src="img/product-slider/1.png" alt="img" />
+                    </picture>
                   </li>
                   <li class="swiper-slide slider-nav__slide">
-                    <img src="img/product-slider/2.png" alt="Слайд №1" />
+                    <picture>
+                      <source
+                        srcset="img/product-slider/2.png"
+                        type="image/webp"
+                      />
+                      <img src="img/product-slider/2.png" alt="img" />
+                    </picture>
                   </li>
                   <li class="swiper-slide slider-nav__slide">
-                    <img src="img/product-slider/3.png" alt="Слайд №1" />
+                    <picture>
+                      <source
+                        srcset="img/product-slider/3.png"
+                        type="image/webp"
+                      />
+                      <img src="img/product-slider/3.png" alt="img" />
+                    </picture>
                   </li>
                   <li class="swiper-slide slider-nav__slide">
-                    <img src="img/product-slider/1.png" alt="Слайд №1" />
+                    <picture>
+                      <source
+                        srcset="img/product-slider/1.png"
+                        type="image/webp"
+                      />
+                      <img src="img/product-slider/1.png" alt="img" />
+                    </picture>
                   </li>
                   <li class="swiper-slide slider-nav__slide">
-                    <img src="img/product-slider/2.png" alt="Слайд №1" />
+                    <picture>
+                      <source
+                        srcset="img/product-slider/2.png"
+                        type="image/webp"
+                      />
+                      <img src="img/product-slider/2.png" alt="img" />
+                    </picture>
                   </li>
                   <li class="swiper-slide slider-nav__slide">
-                    <img src="img/product-slider/2.png" alt="Слайд №1" />
+                    <picture>
+                      <source
+                        srcset="img/product-slider/3.png"
+                        type="image/webp"
+                      />
+                      <img src="img/product-slider/3.png" alt="img" />
+                    </picture>
                   </li>
                 </ul>
               </div>
 
-              <div class="slider-thumbs__nav-control">
+              <!-- <div class="slider-thumbs__nav-control">
                 <button
                   class="swiper-button-prev"
                   type="button"
@@ -3121,69 +3160,80 @@
                   type="button"
                   aria-label="Следующий"
                 ></button>
-              </div>
+              </div> -->
             </div>
 
             <div class="slider-thumbs__main swiper" id="slider-main">
               <ul class="swiper-wrapper">
                 <li class="swiper-slide">
-                  <a
-                    class="slider-thumbs__img"
-                    data-fancybox="gallery"
-                    href="https://images.unsplash.com/photo-1668696381185-46c77ee52d1a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80"
-                    onmousemove="zoom(event)"
-                  >
-                    <img src="img/product-slider/1-big.png" alt="Слайд №1" />
+                  <div class="slider-thumbs__img">
+                    <picture>
+                      <source
+                        srcset="img/product-slider/1-big.webp"
+                        type="image/webp"
+                      />
+                      <img src="img/product-slider/1-big.png" alt="img" />
+                    </picture>
+                  </div>
+                </li>
+                <li class="swiper-slide">
+                  <div class="slider-thumbs__img">
+                    <picture>
+                      <source
+                        srcset="img/product-slider/1-big.webp"
+                        type="image/webp"
+                      />
+                      <img src="img/product-slider/1-big.png" alt="img" />
+                    </picture>
+                  </div>
+                </li>
+                <li class="swiper-slide">
+                  <div class="slider-thumbs__img">
+                    <picture>
+                      <source
+                        srcset="img/product-slider/1-big.webp"
+                        type="image/webp"
+                      />
+                      <img src="img/product-slider/1-big.png" alt="img" />
+                    </picture>
+                  </div>
+                </li>
+                <li class="swiper-slide">
+                  <a class="slider-thumbs__img">
+                    <picture>
+                      <source
+                        srcset="img/product-slider/1-big.webp"
+                        type="image/webp"
+                      />
+                      <img src="img/product-slider/1-big.png" alt="img" />
+                    </picture>
                   </a>
                 </li>
                 <li class="swiper-slide">
-                  <a
-                    class="slider-thumbs__img"
-                    data-fancybox="gallery"
-                    href="img/product-slider/1-big.png"
-                  >
-                    <img src="img/product-slider/1-big.png" alt="Слайд №1" />
-                  </a>
+                  <div class="slider-thumbs__img">
+                    <picture>
+                      <source
+                        srcset="img/product-slider/1-big.webp"
+                        type="image/webp"
+                      />
+                      <img src="img/product-slider/1-big.png" alt="img" />
+                    </picture>
+                  </div>
                 </li>
                 <li class="swiper-slide">
-                  <a
-                    class="slider-thumbs__img"
-                    data-fancybox="gallery"
-                    href="img/product-slider/1-big.png"
-                  >
-                    <img src="img/product-slider/1-big.png" alt="Слайд №1" />
-                  </a>
-                </li>
-                <li class="swiper-slide">
-                  <a
-                    class="slider-thumbs__img"
-                    data-fancybox="gallery"
-                    href="img/product-slider/1-big.png"
-                  >
-                    <img src="img/product-slider/1-big.png" alt="Слайд №1" />
-                  </a>
-                </li>
-                <li class="swiper-slide">
-                  <a
-                    class="slider-thumbs__img"
-                    data-fancybox="gallery"
-                    href="img/product-slider/1-big.png"
-                  >
-                    <img src="img/product-slider/1-big.png" alt="Слайд №1" />
-                  </a>
-                </li>
-                <li class="swiper-slide">
-                  <a
-                    class="slider-thumbs__img"
-                    data-fancybox="gallery"
-                    href="img/product-slider/1-big.png"
-                  >
-                    <img src="img/product-slider/1-big.png" alt="Слайд №1" />
-                  </a>
+                  <div class="slider-thumbs__img">
+                    <picture>
+                      <source
+                        srcset="img/product-slider/1-big.webp"
+                        type="image/webp"
+                      />
+                      <img src="img/product-slider/1-big.png" alt="img" />
+                    </picture>
+                  </div>
                 </li>
               </ul>
 
-              <button
+              <!-- <button
                 class="swiper-button-prev"
                 type="button"
                 aria-label="Предыдущий"
@@ -3192,7 +3242,7 @@
                 class="swiper-button-next"
                 type="button"
                 aria-label="Следующий"
-              ></button>
+              ></button> -->
             </div>
           </div>
         </div>
@@ -7395,6 +7445,16 @@
 
 <div class="bottom-nav">
   <div class="bottom-nav__content">
+    <button
+      class="swiper-button-prev"
+      type="button"
+      aria-label="Предыдущий"
+    ></button>
+    <button
+      class="swiper-button-next"
+      type="button"
+      aria-label="Следующий"
+    ></button>
     <div class="bottom-nav__slider swiper">
       <ul class="bottom-nav__list swiper-wrapper">
         <li class="bottom-nav__item swiper-slide">
@@ -7971,8 +8031,7 @@
   referrerpolicy="no-referrer"
 ></script>
 
-<script src="https://unpkg.com/js-image-zoom@0.7.0/js-image-zoom.js" type="application/javascript"></script>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/elevatezoom/2.2.3/jquery.elevatezoom.min.js" integrity="sha512-UH428GPLVbCa8xDVooDWXytY8WASfzVv3kxCvTAFkxD2vPjouf1I3+RJ2QcSckESsb7sI+gv3yhsgw9ZhM7sDw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 <!-- fancybox -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
