@@ -9,23 +9,25 @@ window.addEventListener('DOMContentLoaded', () => {
   function zoomImgs() {
     const container = document.querySelectorAll('.slider-thumbs__img');
 
-    container.forEach((el) => {
-      const img = el.querySelector('img');
-      if (el) {
-        el.addEventListener('mousemove', (e) => {
-          const x = e.clientX - e.target.offsetLeft;
-          const y = e.clientY - e.target.offsetTop;
+    if (window.innerWidth > 991) {
+      container.forEach((el) => {
+        const img = el.querySelector('img');
+        if (el) {
+          el.addEventListener('mousemove', (e) => {
+            const x = e.clientX - e.target.offsetLeft;
+            const y = e.clientY - e.target.offsetTop;
 
-          img.style.transformOrigin = `${x}px ${y}px`;
-          img.style.transform = 'scale(1.8)';
-        });
+            img.style.transformOrigin = `${x}px ${y}px`;
+            img.style.transform = 'scale(1.8)';
+          });
 
-        el.addEventListener('mouseleave', () => {
-          img.style.transformOrigin = 'center';
-          img.style.transform = 'scale(1)';
-        });
-      }
-    });
+          el.addEventListener('mouseleave', () => {
+            img.style.transformOrigin = 'center';
+            img.style.transform = 'scale(1)';
+          });
+        }
+      });
+    }
   }
   zoomImgs();
 
@@ -119,25 +121,25 @@ window.addEventListener('DOMContentLoaded', () => {
   })();
 
   // * ===== Slider
-  (function slider() {
-    const sliderEl = document.querySelector('.bottom-nav__slider');
-    new Swiper(sliderEl, {
-      pagination: {
-        el: document.querySelector('.bottom-nav__slider .swiper-pagination'),
-        type: 'progressbar',
-      },
-      navigation: {
-        nextEl: document.querySelector(
-          '.bottom-nav__content .swiper-button-next'
-        ),
-        prevEl: document.querySelector(
-          '.bottom-nav__content .swiper-button-prev'
-        ),
-      },
-      spaceBetween: 28,
-      slidesPerView: 'auto',
-    });
-  })();
+  // (function slider() {
+  //   const sliderEl = document.querySelector('.bottom-nav__slider');
+  //   new Swiper(sliderEl, {
+  //     pagination: {
+  //       el: document.querySelector('.bottom-nav__slider .swiper-pagination'),
+  //       type: 'progressbar',
+  //     },
+  //     navigation: {
+  //       nextEl: document.querySelector(
+  //         '.bottom-nav__content .swiper-button-next'
+  //       ),
+  //       prevEl: document.querySelector(
+  //         '.bottom-nav__content .swiper-button-prev'
+  //       ),
+  //     },
+  //     spaceBetween: 28,
+  //     slidesPerView: 'auto',
+  //   });
+  // })();
 
   // * ===== Slider
   (function slider() {
