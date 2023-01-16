@@ -16,4 +16,10 @@
 Категории: https://vsulimovvv.github.io/brigadir/app/categories.html  
 Подкатегории: https://vsulimovvv.github.io/brigadir/app/subcategories.html  
 Подкатегории 2-го уровня: https://vsulimovvv.github.io/brigadir/app/subcategories-2.html  
-Каталог: https://vsulimovvv.github.io/brigadir/app/catalog.html  
+Каталог: https://vsulimovvv.github.io/brigadir/app/catalog.html
+
+Контакты: https://vsulimovvv.github.io/brigadir/app/catalog.html  
+Отзывы: https://vsulimovvv.github.io/brigadir/app/catalog.html  
+Гарантии и возврат: https://vsulimovvv.github.io/brigadir/app/catalog.html  
+О нас: https://vsulimovvv.github.io/brigadir/app/catalog.html  
+Бонусы: https://vsulimovvv.github.io/brigadir/app/catalog.html  
