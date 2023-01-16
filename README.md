@@ -18,8 +18,8 @@
 Подкатегории 2-го уровня: https://vsulimovvv.github.io/brigadir/app/subcategories-2.html  
 Каталог: https://vsulimovvv.github.io/brigadir/app/catalog.html
 
-Контакты: https://vsulimovvv.github.io/brigadir/app/catalog.html  
-Отзывы: https://vsulimovvv.github.io/brigadir/app/catalog.html  
-Гарантии и возврат: https://vsulimovvv.github.io/brigadir/app/catalog.html  
-О нас: https://vsulimovvv.github.io/brigadir/app/catalog.html  
-Бонусы: https://vsulimovvv.github.io/brigadir/app/catalog.html  
+Контакты: https://vsulimovvv.github.io/brigadir/app/contacts.html  
+Отзывы: https://vsulimovvv.github.io/brigadir/app/reviews.html  
+Гарантии и возврат: https://vsulimovvv.github.io/brigadir/app/return.html  
+О нас: https://vsulimovvv.github.io/brigadir/app/about.html  
+Бонусы: https://vsulimovvv.github.io/brigadir/app/bonus.html  
