@@ -121,27 +121,6 @@ window.addEventListener('DOMContentLoaded', () => {
   })();
 
   // * ===== Slider
-  // (function slider() {
-  //   const sliderEl = document.querySelector('.bottom-nav__slider');
-  //   new Swiper(sliderEl, {
-  //     pagination: {
-  //       el: document.querySelector('.bottom-nav__slider .swiper-pagination'),
-  //       type: 'progressbar',
-  //     },
-  //     navigation: {
-  //       nextEl: document.querySelector(
-  //         '.bottom-nav__content .swiper-button-next'
-  //       ),
-  //       prevEl: document.querySelector(
-  //         '.bottom-nav__content .swiper-button-prev'
-  //       ),
-  //     },
-  //     spaceBetween: 28,
-  //     slidesPerView: 'auto',
-  //   });
-  // })();
-
-  // * ===== Slider
   (function slider() {
     const sliderEl = document.querySelectorAll('.products-stock__slider');
 
@@ -421,7 +400,7 @@ window.addEventListener('DOMContentLoaded', () => {
           const content = target.querySelector(accordionContent);
           target.classList.toggle('active');
           if (target.classList.contains('active')) {
-            content.style.maxHeight = content.scrollHeight + 'px';
+            content.style.maxHeight = content.scrollHeight + '1px';
           } else {
             content.style.maxHeight = null;
           }
@@ -430,6 +409,7 @@ window.addEventListener('DOMContentLoaded', () => {
     });
   };
   toggleAccordion('.accordion-control', '.accordion-content', '.accordion');
+  toggleAccordion('.drop-box__control', '.drop-box__content', '.drop-box');
 
   // * ==== Counter
   (function counter() {
@@ -493,59 +473,59 @@ window.addEventListener('DOMContentLoaded', () => {
     });
   })();
 
-  // * ===== Mobile Menu Changer
-  (function mobileMenuChanger() {
-    const mobileDropdown = document.querySelectorAll('.mobile-dropdown');
-    const mobileSubdropdown = document.querySelectorAll('.mobile-subdropdown');
-    const btn = document.querySelectorAll('.mobile-menu__link');
+  // // * ===== Mobile Menu Changer
+  // (function mobileMenuChanger() {
+  //   const mobileDropdown = document.querySelectorAll('.mobile-dropdown');
+  //   const mobileSubdropdown = document.querySelectorAll('.mobile-subdropdown');
+  //   const btn = document.querySelectorAll('.mobile-menu__link');
 
-    btn.forEach((el) => {
-      if (el) {
-        el.addEventListener('click', (e) => {
-          const targetName = el.dataset.target;
+  //   btn.forEach((el) => {
+  //     if (el) {
+  //       el.addEventListener('click', (e) => {
+  //         const targetName = el.dataset.target;
 
-          mobileDropdown.forEach((el) => {
-            if (targetName === el.dataset.drop) {
-              el.classList.add('active');
+  //         mobileDropdown.forEach((el) => {
+  //           if (targetName === el.dataset.drop) {
+  //             el.classList.add('active');
 
-              el.querySelector('.mobile-dropdown__back').addEventListener(
-                'click',
-                (e) => {
-                  el.classList.remove('active');
-                }
-              );
-            }
-          });
+  //             el.querySelector('.mobile-dropdown__back').addEventListener(
+  //               'click',
+  //               (e) => {
+  //                 el.classList.remove('active');
+  //               }
+  //             );
+  //           }
+  //         });
 
-          const links = document.querySelectorAll('.mobile-dropdown__link');
+  //         const links = document.querySelectorAll('.mobile-dropdown__link');
 
-          links.forEach((el) => {
-            el.addEventListener('click', (e) => {
-              const targetName = el.dataset.target;
+  //         links.forEach((el) => {
+  //           el.addEventListener('click', (e) => {
+  //             const targetName = el.dataset.target;
 
-              mobileSubdropdown.forEach((el) => {
-                if (targetName === el.dataset.drop) {
-                  el.classList.add('active');
+  //             mobileSubdropdown.forEach((el) => {
+  //               if (targetName === el.dataset.drop) {
+  //                 el.classList.add('active');
 
-                  el.querySelector(
-                    '.mobile-subdropdown__back'
-                  ).addEventListener('click', (e) => {
-                    el.classList.remove('active');
-                  });
-                }
-              });
-            });
-          });
+  //                 el.querySelector(
+  //                   '.mobile-subdropdown__back'
+  //                 ).addEventListener('click', (e) => {
+  //                   el.classList.remove('active');
+  //                 });
+  //               }
+  //             });
+  //           });
+  //         });
 
-          mobileDropdown
-            .querySelector('.mobile-dropdown__back')
-            .addEventListener('click', (e) => {
-              mobileDropdown.classList.remove('active');
-            });
-        });
-      }
-    });
-  })();
+  //         mobileDropdown
+  //           .querySelector('.mobile-dropdown__back')
+  //           .addEventListener('click', (e) => {
+  //             mobileDropdown.classList.remove('active');
+  //           });
+  //       });
+  //     }
+  //   });
+  // })();
 
   // * ===== Modal
   (function modals() {

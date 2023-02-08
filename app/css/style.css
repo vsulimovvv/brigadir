@@ -3132,11 +3132,6 @@ body.no-scroll {
   z-index: 12;
   width: 100%;
   overflow: hidden;
-  -webkit-transform: translateX(-100%);
-      -ms-transform: translateX(-100%);
-          transform: translateX(-100%);
-  opacity: 0;
-  visibility: hidden;
   overflow-y: auto;
   -webkit-transition: 550ms ease-in-out;
   -o-transition: 550ms ease-in-out;
@@ -3539,6 +3534,127 @@ body.no-scroll {
   -webkit-mask: url("../img/icons/triangle.svg") no-repeat center/contain;
           mask: url("../img/icons/triangle.svg") no-repeat center/contain;
   background-color: var(--color-dark);
+}
+
+.menu-mobile-box.accordion.active .menu-mobile-box__name {
+  color: var(--color-accent);
+}
+.menu-mobile-box__top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  padding: 12px 0;
+  cursor: pointer;
+}
+.menu-mobile-box__name {
+  margin-right: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-right: 10px;
+  font-size: inherit;
+  width: 100%;
+  text-align: left;
+  color: var(--color-black);
+}
+.menu-mobile-box__name img {
+  width: 24px;
+  height: 24px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  margin-right: 15px;
+}
+.menu-mobile-box__content {
+  padding-left: 20px;
+}
+.menu-mobile-box__list {
+  padding-top: 10px;
+  padding-bottom: 15px;
+  overflow: hidden;
+  overflow-y: auto;
+  max-height: 500px;
+}
+.menu-mobile-box__link {
+  display: block;
+  font-size: 16px;
+  padding: 5px 0;
+}
+
+.drop-box {
+  width: 100%;
+  padding-left: 20px;
+}
+.drop-box:not(:last-child) {
+  margin-bottom: 10px;
+}
+.drop-box.active .drop-box__name {
+  color: var(--color-accent);
+}
+.drop-box.active .drop-box__control::after {
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+.drop-box__item:not(:last-child) {
+  margin-bottom: 10px;
+}
+.drop-box__top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+.drop-box__content {
+  max-height: 0;
+  overflow: hidden;
+  z-index: 9;
+  padding-left: 10px;
+}
+.drop-box__list {
+  max-height: 300px;
+  overflow-y: auto;
+}
+.drop-box__name {
+  width: 100%;
+  color: var(--color-black);
+}
+.drop-box__control {
+  -webkit-transition: 150ms ease;
+  -o-transition: 150ms ease;
+  transition: 150ms ease;
+  position: relative;
+  cursor: pointer;
+  padding: 10px 0;
+}
+.drop-box__control::after {
+  position: absolute;
+  content: "";
+  width: 20px;
+  height: 10px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  right: 0;
+  -webkit-mask: url("../img/icons/chevron.svg") no-repeat center/contain;
+          mask: url("../img/icons/chevron.svg") no-repeat center/contain;
+  background-color: var(--color-dark);
+  -webkit-transition: 250ms ease;
+  -o-transition: 250ms ease;
+  transition: 250ms ease;
 }
 
 @media (max-width: 991.98px) {
