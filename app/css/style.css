@@ -3471,11 +3471,32 @@ body.no-scroll {
 .menu-mobile-box.accordion.active .menu-mobile-box__name {
   color: var(--color-accent);
 }
+.menu-mobile-box.accordion.active .accordion-control svg {
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+.menu-mobile-box .accordion-control {
+  padding-right: 5px;
+  width: 50px;
+  height: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
 .menu-mobile-box .accordion-control::after {
-  width: 7px;
-  height: 7px;
-  -webkit-mask: url("../img/icons/triangle.svg") no-repeat center/contain;
-          mask: url("../img/icons/triangle.svg") no-repeat center/contain;
+  display: none;
+}
+.menu-mobile-box .accordion-control svg {
+  width: 10px;
+  height: 10px;
+  pointer-events: none;
 }
 .menu-mobile-box__top {
   display: -webkit-box;
@@ -3501,9 +3522,12 @@ body.no-scroll {
           align-items: center;
   padding-right: 10px;
   font-size: inherit;
-  width: 100%;
   text-align: left;
   color: var(--color-black);
+  width: 100%;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
 .menu-mobile-box__name img {
   width: 24px;
@@ -3531,14 +3555,12 @@ body.no-scroll {
 .drop-box {
   width: 100%;
   padding-left: 20px;
-}
-.drop-box:not(:last-child) {
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 .drop-box.active .drop-box__name {
   color: var(--color-accent);
 }
-.drop-box.active .drop-box__control::after {
+.drop-box.active .drop-box__control svg {
   -webkit-transform: rotate(180deg);
       -ms-transform: rotate(180deg);
           transform: rotate(180deg);
@@ -3554,6 +3576,9 @@ body.no-scroll {
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 .drop-box__content {
   max-height: 0;
@@ -3566,34 +3591,40 @@ body.no-scroll {
   overflow-y: auto;
   padding: 10px 0;
 }
+.drop-box__link {
+  display: block;
+  width: 100%;
+  -webkit-transition: 200ms ease;
+  -o-transition: 200ms ease;
+  transition: 200ms ease;
+}
+.drop-box__link:hover {
+  color: var(--color-accent);
+}
 .drop-box__name {
   width: 100%;
   color: var(--color-black);
 }
 .drop-box__control {
-  -webkit-transition: 150ms ease;
-  -o-transition: 150ms ease;
-  transition: 150ms ease;
-  position: relative;
+  padding-right: 5px;
+  width: 30px;
+  height: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   cursor: pointer;
-  padding: 10px 0;
+  width: 50px;
 }
-.drop-box__control::after {
-  position: absolute;
-  content: "";
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-          transform: translateY(-50%);
-  right: 0;
-  background-color: var(--color-dark);
-  -webkit-transition: 250ms ease;
-  -o-transition: 250ms ease;
-  transition: 250ms ease;
-  width: 7px;
-  height: 7px;
-  -webkit-mask: url("../img/icons/triangle.svg") no-repeat center/contain;
-          mask: url("../img/icons/triangle.svg") no-repeat center/contain;
+.drop-box__control svg {
+  width: 10px;
+  height: 10px;
+  pointer-events: none;
 }
 
 @media (max-width: 991.98px) {
